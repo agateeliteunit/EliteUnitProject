@@ -3,7 +3,15 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - DeadZone
+  - VehicleArea
+  - Bullet
+  - Loop
+  - RagdollZone
+  - Grass
+  - Stone
+  - Tiles
   layers:
   - Default
   - TransparentFX
@@ -13,15 +21,15 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Vehicle
+  - Player
+  - Bullet
+  - Terrain
+  - VehicleMeshCollider
+  - VehicleWheel
+  - Weapon
+  - PlayerBones
+  - Walls
   - 
   - 
   - 
