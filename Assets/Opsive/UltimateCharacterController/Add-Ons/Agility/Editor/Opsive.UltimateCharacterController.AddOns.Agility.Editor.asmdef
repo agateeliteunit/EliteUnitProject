@@ -1,0 +1,21 @@
+{
+    "name": "Opsive.UltimateCharacterController.AddOns.Agility.Editor",
+    "references": [
+        "Opsive.UltimateCharacterController",
+        "Opsive.UltimateCharacterController.Editor",
+        "Opsive.UltimateCharacterController.AddOns.Shared.Editor",
+        "Opsive.Shared.Editor",
+        "Opsive.UltimateCharacterController.AddOns"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
