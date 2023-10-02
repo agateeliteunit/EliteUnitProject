@@ -158,7 +158,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Standalone: Julhiecio.ThirdPersonShooterTemplateDemo
+    Standalone: com.DefaultCompany.EliteUnitProject
   buildNumber:
     Standalone: 0
     iPhone: 0
@@ -740,7 +740,7 @@ PlayerSettings:
     PS5: UNITY_POST_PROCESSING_STACK_V2
     QNX: UNITY_POST_PROCESSING_STACK_V2
     Stadia: UNITY_POST_PROCESSING_STACK_V2
-    Standalone: UNITY_POST_PROCESSING_STACK_V2
+    Standalone: UNITY_POST_PROCESSING_STACK_V2;THIRD_PERSON_CONTROLLER;ULTIMATE_CHARACTER_CONTROLLER_SHOOTER;ULTIMATE_CHARACTER_CONTROLLER_MELEE;ULTIMATE_CHARACTER_CONTROLLER_UNIVERSALRP;ULTIMATE_CHARACTER_CONTROLLER_AGILITY
     WebGL: UNITY_POST_PROCESSING_STACK_V2
     Windows Store Apps: UNITY_POST_PROCESSING_STACK_V2
     XboxOne: UNITY_POST_PROCESSING_STACK_V2
