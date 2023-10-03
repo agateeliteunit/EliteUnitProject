@@ -6274,6 +6274,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Monitors
       objectReference: {fileID: 0}
+    - target: {fileID: 114610700503969776, guid: b5bf2e4077598914b83fc5e4ca20f2f4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 224285287289726662, guid: b5bf2e4077598914b83fc5e4ca20f2f4, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
