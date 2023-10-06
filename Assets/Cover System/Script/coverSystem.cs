@@ -12,13 +12,12 @@ public class coverSystem : MonoBehaviour
 {
     public Camera tpsCamera;
     public Camera fpsCamera;
-
-    private bool isFPS;
-    private bool isPlayerTeleporting;
-    private Transform teleportDestination;
+    private bool FPS;
+    private bool teleporting;
+    private Transform targetTeleport;
     private UltimateCharacterLocomotion characterController;
     private FPSMovement fpsMovement;
-    private bool isScanning;
+    private bool Scanning;
     private UnityInput unityInput;
 
     void Start()
@@ -33,7 +32,7 @@ public class coverSystem : MonoBehaviour
 
     void Update()
     {
-        if (!isPlayerTeleporting)
+        if (!teleporting)
         {
             Vector3 playerCenter = transform.position;
             Vector3 boxSize = Vector3.one * 2f;
@@ -45,27 +44,27 @@ public class coverSystem : MonoBehaviour
                 {
                     if (Input.GetKeyDown(KeyCode.E))
                     {
-                        ToggleFPSMode();
+                        FPSMode();
                     }
                 }
             }
         }
     }
 
-    async void ToggleFPSMode()
+    async void FPSMode()
     {
-        isFPS = !isFPS;
-        tpsCamera.enabled = !isFPS;
-        fpsCamera.enabled = isFPS;
+        FPS = !FPS;
+        tpsCamera.enabled = !FPS;
+        fpsCamera.enabled = FPS;
 
-        if (isFPS)
+        if (FPS)
         {
-            teleportDestination = FindCoverPosition();
-            await TeleportPlayer(teleportDestination.position);
-            if (isFPS && !isScanning)
+            targetTeleport = ScanPosisiCover();
+            await Teleport(targetTeleport.position);
+            if (FPS && !Scanning)
             {
-                isScanning = true;
-                await ScanForWallsAsync();
+                Scanning = true;
+                await ScanWall();
             }
             unityInput.enabled = false;
             Cursor.lockState = CursorLockMode.None;
@@ -79,7 +78,7 @@ public class coverSystem : MonoBehaviour
         }
     }
 
-    Transform FindCoverPosition()
+    Transform ScanPosisiCover()
     {
         foreach (var collider in Physics.OverlapBox(transform.position, Vector3.one * 2f))
         {
@@ -91,17 +90,17 @@ public class coverSystem : MonoBehaviour
         return null;
     }
 
-    async Task TeleportPlayer(Vector3 destination)
+    async Task Teleport(Vector3 destination)
     {
         characterController.enabled = false;
         transform.position = destination;
         await Task.Delay(100);
-        isPlayerTeleporting = false;
+        teleporting = false;
     }
 
-    async Task ScanForWallsAsync()
+    async Task ScanWall()
     {
-        while (isScanning)
+        while (Scanning)
         {
             fpsCamera.enabled = false;
             transform.Rotate(Vector3.up, 200f * Time.deltaTime);
@@ -110,7 +109,7 @@ public class coverSystem : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit, 1f) && hit.collider.CompareTag("Wall"))
             {
-                isScanning = false;
+                Scanning = false;
                 fpsCamera.enabled = true;
                 fpsMovement.enabled = true;
                 break;
@@ -118,11 +117,5 @@ public class coverSystem : MonoBehaviour
 
             await Task.Yield();
         }
-    }
-
-    void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawRay(transform.position + Vector3.up, transform.forward * 2f);
     }
 }
