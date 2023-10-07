@@ -5,24 +5,16 @@ using UnityEngine;
 public class WorldEnemyBaseController : MonoBehaviour
 {
     [SerializeField] private GameObject _enemyBase;
-    [SerializeField] private GameObject _firstEnemyBaseSpawnPoint;
+    [SerializeField] private GameObject[] _triggerEnemyBase;
     [SerializeField] private GameObject[] _enemySpawnPoints;
     private int _totalEnemyBase;
-    private int _currentEnemyBaseIndex = 0;
-    // Start is called before the first frame update
-    void Start()
+    
+    public void SpawnEnemyBase(int targetBaseIndex)
     {
-        _totalEnemyBase = _enemySpawnPoints.Length;
-        Instantiate(_enemyBase, _firstEnemyBaseSpawnPoint.transform.position, Quaternion.identity);
-    }
-
-    public void SpawnEnemyBase()
-    {
-        if (_totalEnemyBase > 0)
+        if (targetBaseIndex < _triggerEnemyBase.Length)
         {
-            Instantiate(_enemyBase, _enemySpawnPoints[_currentEnemyBaseIndex].transform.position, Quaternion.identity);
-            _currentEnemyBaseIndex++;
-            _totalEnemyBase--;
+            _enemySpawnPoints[targetBaseIndex].SetActive(true);
+            _triggerEnemyBase[targetBaseIndex].SetActive(false);
         }
         else
         {
