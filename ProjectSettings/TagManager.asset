@@ -12,6 +12,7 @@ TagManager:
   - Grass
   - Stone
   - Tiles
+  - TriggerEnemyBase
   layers:
   - Default
   - TransparentFX
