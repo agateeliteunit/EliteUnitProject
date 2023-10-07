@@ -495,6 +495,7 @@ GameObject:
   m_Component:
   - component: {fileID: 439262554}
   - component: {fileID: 439262555}
+  - component: {fileID: 439262556}
   m_Layer: 0
   m_Name: TriggerFinish
   m_TagString: Untagged
@@ -538,6 +539,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 13.5579605, y: 6.2589345, z: 8.960098}
   m_Center: {x: -7.8135223, y: -1.3419011, z: 6.960823}
+--- !u!114 &439262556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 439262553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a943f68b6e579aafbaf16f5cd207fe2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _worldController: {fileID: 2137783593}
 --- !u!1 &464800971
 GameObject:
   m_ObjectHideFlags: 0
@@ -2103,6 +2117,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1542408621}
   - component: {fileID: 1542408622}
+  - component: {fileID: 1542408623}
   m_Layer: 0
   m_Name: CheckpointA
   m_TagString: Untagged
@@ -2146,6 +2161,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 64.575714, y: 12.312888, z: 2.1062164}
   m_Center: {x: 2.8532314, y: -4.2153125, z: -0.5531082}
+--- !u!114 &1542408623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1542408620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4afe2b3b3a8e77df6a09c5abcb34d498, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _worldController: {fileID: 2137783593}
 --- !u!1 &1587656680 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1725488536192491501, guid: 52400374c7d0ff54995c488bb0fe862c, type: 3}

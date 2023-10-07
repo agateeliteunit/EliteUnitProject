@@ -9,7 +9,7 @@ public class TriggerCheckpoint : MonoBehaviour
     
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Checkpoint"))
+        if (other.CompareTag("Player"))
         {
             _worldController.TriggerCheckpoint(other.transform.position);
         }

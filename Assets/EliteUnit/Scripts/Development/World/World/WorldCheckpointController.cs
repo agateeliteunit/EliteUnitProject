@@ -20,9 +20,9 @@ public class WorldCheckpointController : MonoBehaviour
             {
                 _playerSpawnPoint.transform.position = _checkpoints[i].transform.position;
                 _checkpoints[i].SetActive(false);
-                _savedAmmo = currentAmmo;
-                _savedGranades = currentGranades;
-                _savedTimeLeft = timeLeft;
+                // _savedAmmo = currentAmmo;
+                // _savedGranades = currentGranades;
+                // _savedTimeLeft = timeLeft;
                 _savedCheckpointIndex++;
                 Debug.Log("Checkpoint saved! at index: " + _savedCheckpointIndex);
             }
