@@ -2101,7 +2101,7 @@ MonoBehaviour:
   m_SurfaceImpact: {fileID: 0}
   m_ClipSize: 8
   m_AutoReload: 3
-  m_ReloadType: 0
+  m_ReloadType: 1
   m_ReloadCanCameraZoom: 1
   m_ReloadCrosshairsSpread: 1
   m_ReloadAnimatorAudioStateSet:
@@ -2157,13 +2157,13 @@ MonoBehaviour:
     m_WaitForAnimationEvent: 1
     m_Duration: 0.4
   m_PositionRecoil:
-    m_MinValue: {x: 0, y: 0, z: -0.3}
+    m_MinValue: {x: 0, y: 0, z: -0.5}
     m_MaxValue: {x: 0, y: 0.01, z: -0.1}
     m_MinMagnitude: {x: 0, y: 0, z: 0}
   m_RotationRecoil:
-    m_MinValue: {x: -0.5, y: -0.5, z: 0}
-    m_MaxValue: {x: 0.5, y: 0.5, z: 0}
-    m_MinMagnitude: {x: 0, y: 0, z: 0}
+    m_MinValue: {x: -40, y: -0.5, z: 0}
+    m_MaxValue: {x: -30, y: 0.5, z: 0}
+    m_MinMagnitude: {x: 20, y: 0, z: 0}
   m_PositionCameraRecoil:
     m_MinValue: {x: 0, y: 0, z: 0}
     m_MaxValue: {x: 0, y: 0, z: 0}
@@ -5403,7 +5403,7 @@ MonoBehaviour:
     m_MinValue: {x: -2, y: -1, z: 0}
     m_MaxValue: {x: -1, y: 1, z: 0}
     m_MinMagnitude: {x: 0, y: 0, z: 0}
-  m_CameraRecoilAccumulation: 0
+  m_CameraRecoilAccumulation: 0.1
   m_LocalizeRecoilForce: 0
   m_MuzzleFlash: {fileID: 1090768013372814, guid: eb09978e480a1a54087be6ff989d9f57, type: 3}
   m_PoolMuzzleFlash: 1
@@ -6500,7 +6500,7 @@ MonoBehaviour:
     m_MinValue: {x: -2, y: -1, z: 0}
     m_MaxValue: {x: -1, y: 1, z: 0}
     m_MinMagnitude: {x: 0, y: 0, z: 0}
-  m_CameraRecoilAccumulation: 0
+  m_CameraRecoilAccumulation: 0.2
   m_LocalizeRecoilForce: 0
   m_MuzzleFlash: {fileID: 1090768013372814, guid: eb09978e480a1a54087be6ff989d9f57, type: 3}
   m_PoolMuzzleFlash: 1
