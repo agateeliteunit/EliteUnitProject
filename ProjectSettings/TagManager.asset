@@ -13,6 +13,8 @@ TagManager:
   - Stone
   - Tiles
   - TriggerEnemyBase
+  - Wall
+  - posisiCover
   layers:
   - Default
   - TransparentFX
@@ -37,9 +39,9 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
+  - coverKanan
+  - coverKiri
+  - coverAtas
   - Enemy
   - MovingPlatform
   - VisualEffect

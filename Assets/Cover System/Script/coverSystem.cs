@@ -16,6 +16,7 @@ public class coverSystem : MonoBehaviour
     private bool teleporting;
     private Transform targetTeleport;
     private UltimateCharacterLocomotion characterController;
+    private UltimateCharacterLocomotionHandler characterInput;
     private FPSMovement fpsMovement;
     private bool Scanning;
     private UnityInput unityInput;
@@ -25,6 +26,7 @@ public class coverSystem : MonoBehaviour
         tpsCamera.enabled = true;
         fpsCamera.enabled = false;
         characterController = GetComponent<UltimateCharacterLocomotion>();
+        characterInput = GetComponent<UltimateCharacterLocomotionHandler>();
         fpsMovement = GetComponent<FPSMovement>();
         fpsMovement.enabled = false;
         unityInput = GetComponent<UnityInput>();
@@ -74,6 +76,7 @@ public class coverSystem : MonoBehaviour
         {
             unityInput.enabled = true;
             characterController.enabled = true;
+            characterInput.enabled = true;
             fpsMovement.enabled = false;
         }
     }
@@ -93,6 +96,7 @@ public class coverSystem : MonoBehaviour
     async Task Teleport(Vector3 destination)
     {
         characterController.enabled = false;
+        characterInput.enabled = false;
         transform.position = destination;
         await Task.Delay(100);
         teleporting = false;
