@@ -15,6 +15,7 @@ TagManager:
   - TriggerEnemyBase
   - Wall
   - posisiCover
+  - TriggerEnemyBase
   layers:
   - Default
   - TransparentFX
