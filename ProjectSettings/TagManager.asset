@@ -12,6 +12,7 @@ TagManager:
   - Grass
   - Stone
   - Tiles
+  - TriggerEnemyBase
   - Wall
   - posisiCover
   layers:

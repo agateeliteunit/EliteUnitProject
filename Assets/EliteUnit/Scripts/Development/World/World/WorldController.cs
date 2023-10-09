@@ -27,8 +27,13 @@ public class WorldController : MonoBehaviour
             _inventoryController._currentGrenades, 
             _missionController.timeLeft
             );
-        _enemyBaseController.SpawnEnemyBase();
         Debug.Log("Checkpoint triggered!");
+    }
+    
+    public void TriggerEnemyBase(int targetBaseIndex)
+    {
+        _enemyBaseController.SpawnEnemyBase(targetBaseIndex);
+        Debug.Log("Enemy base triggered!");
     }
     
     public void LoadCheckpoint()
