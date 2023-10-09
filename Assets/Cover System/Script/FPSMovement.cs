@@ -21,10 +21,31 @@ public class FPSMovement : MonoBehaviour
         {
             if (posisiSekarang < maxMove)
             {
-                Vector3 targetMove = new Vector3(1.3f, 0, 0);
-                transform.Translate(targetMove * moveSpeed * Time.deltaTime);
-                posisiSekarang += moveSpeed * Time.deltaTime;
-                moving = true;
+                Vector3 playerCenter = transform.position;
+                Vector3 boxSize = Vector3.one * 2f;
+                Collider[] colliders = Physics.OverlapBox(playerCenter, boxSize);
+
+                foreach (Collider collider in colliders)
+                {
+                    if (collider.gameObject.layer == LayerMask.NameToLayer("coverKanan"))
+                    {
+                        transform.Translate(new Vector3(1.3f, 0, 0) * moveSpeed * Time.deltaTime);
+                        posisiSekarang += moveSpeed * Time.deltaTime;
+                        moving = true;
+                    }
+                    else if (collider.gameObject.layer == LayerMask.NameToLayer("coverKiri"))
+                    {
+                        transform.Translate(new Vector3(-1.3f, 0, 0) * moveSpeed * Time.deltaTime);
+                        posisiSekarang += moveSpeed * Time.deltaTime;
+                        moving = true;
+                    }
+                    else if (collider.gameObject.layer == LayerMask.NameToLayer("coverAtas"))
+                    {
+                        transform.Translate(new Vector3(0, 0.3f, 0) * moveSpeed * Time.deltaTime);
+                        posisiSekarang += moveSpeed * Time.deltaTime;
+                        moving = true;
+                    }
+                }
             }
         }
         else if (moving)
