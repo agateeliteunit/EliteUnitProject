@@ -2172,7 +2172,7 @@ MonoBehaviour:
     m_MinValue: {x: -2, y: -1, z: 0}
     m_MaxValue: {x: -1, y: 1, z: 0}
     m_MinMagnitude: {x: 0, y: 0, z: 0}
-  m_CameraRecoilAccumulation: 0
+  m_CameraRecoilAccumulation: 0.1
   m_LocalizeRecoilForce: 0
   m_MuzzleFlash: {fileID: 1090768013372814, guid: eb09978e480a1a54087be6ff989d9f57, type: 3}
   m_PoolMuzzleFlash: 1
