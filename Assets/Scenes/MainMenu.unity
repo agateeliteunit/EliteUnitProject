@@ -373,6 +373,46 @@ PrefabInstance:
       propertyPath: sceneToLoad
       value: EliteUnitProject
       objectReference: {fileID: 0}
+    - target: {fileID: 4561531623307077778, guid: bb39724750a16d74da405c74a9fc8182, type: 3}
+      propertyPath: delayBeforeLoading
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4561531623507698061, guid: bb39724750a16d74da405c74a9fc8182, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 9086176721d415347b6afda2effd0c42, type: 3}
+    - target: {fileID: 4561531623507698061, guid: bb39724750a16d74da405c74a9fc8182, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4561531623507698061, guid: bb39724750a16d74da405c74a9fc8182, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4561531623507698061, guid: bb39724750a16d74da405c74a9fc8182, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4561531623507698061, guid: bb39724750a16d74da405c74a9fc8182, type: 3}
+      propertyPath: m_Maskable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4561531623507698062, guid: bb39724750a16d74da405c74a9fc8182, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 4990.871
+      objectReference: {fileID: 0}
+    - target: {fileID: 4561531623507698062, guid: bb39724750a16d74da405c74a9fc8182, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 3082.393
+      objectReference: {fileID: 0}
+    - target: {fileID: 4561531623507698062, guid: bb39724750a16d74da405c74a9fc8182, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4561531623507698062, guid: bb39724750a16d74da405c74a9fc8182, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 441
+      objectReference: {fileID: 0}
     - target: {fileID: 7800355225904563038, guid: bb39724750a16d74da405c74a9fc8182, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
