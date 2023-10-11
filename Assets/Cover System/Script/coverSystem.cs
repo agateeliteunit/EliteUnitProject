@@ -20,6 +20,7 @@ public class coverSystem : MonoBehaviour
     private FPSMovement fpsMovement;
     private bool Scanning;
     private UnityInput unityInput;
+    private crosshair FPSCrosshair;
 
     void Start()
     {
@@ -30,6 +31,8 @@ public class coverSystem : MonoBehaviour
         fpsMovement = GetComponent<FPSMovement>();
         fpsMovement.enabled = false;
         unityInput = GetComponent<UnityInput>();
+        FPSCrosshair = GetComponent<crosshair>();
+        FPSCrosshair.enabled = false;
     }
 
     void Update()
@@ -69,12 +72,12 @@ public class coverSystem : MonoBehaviour
                 await ScanWall();
             }
             unityInput.enabled = false;
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
+            FPSCrosshair.enabled = true;
         }
         else
         {
             unityInput.enabled = true;
+            FPSCrosshair.enabled = false;
             characterController.enabled = true;
             characterInput.enabled = true;
             fpsMovement.enabled = false;
