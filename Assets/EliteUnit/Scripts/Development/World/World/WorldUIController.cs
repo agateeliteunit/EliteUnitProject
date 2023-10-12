@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class WorldUIController : MonoBehaviour
 {
@@ -13,7 +14,10 @@ public class WorldUIController : MonoBehaviour
     // [SerializeField] private GameObject _GUICanvas;
     // Start is called before the first frame update
     
-    
+    public void PlayGame()
+    {
+        SceneManager.LoadScene("Stage 1");
+    }
     void Start()
     {
         // _missionFinishedCanvas.SetActive(false);
