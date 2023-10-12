@@ -206,7 +206,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 93711641}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 529777513}
+        m_TargetAssemblyTypeName: WorldUIController, Assembly-CSharp
+        m_MethodName: PlayGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &93711641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -712,6 +724,7 @@ GameObject:
   - component: {fileID: 529777512}
   - component: {fileID: 529777511}
   - component: {fileID: 529777510}
+  - component: {fileID: 529777513}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -809,6 +822,18 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &529777513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 529777508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47ba9067f7bb4ce4ba06d6c1b948639c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &681733558
 GameObject:
   m_ObjectHideFlags: 0

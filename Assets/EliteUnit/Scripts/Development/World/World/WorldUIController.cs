@@ -18,6 +18,11 @@ public class WorldUIController : MonoBehaviour
     {
         SceneManager.LoadScene("Stage 1");
     }
+
+    public void Credits()
+    {
+        SceneManager.LoadScene("Credits");
+    }
     void Start()
     {
         // _missionFinishedCanvas.SetActive(false);
