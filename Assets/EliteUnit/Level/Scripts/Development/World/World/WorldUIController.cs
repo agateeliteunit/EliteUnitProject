@@ -23,6 +23,12 @@ public class WorldUIController : MonoBehaviour
     {
         SceneManager.LoadScene("Credits");
     }
+
+    public void FooterExit()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
     void Start()
     {
         // _missionFinishedCanvas.SetActive(false);
