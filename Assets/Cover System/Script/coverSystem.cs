@@ -114,7 +114,7 @@ public class coverSystem : MonoBehaviour
             Ray ray = new Ray(transform.position + Vector3.up, transform.forward);
             RaycastHit hit;
 
-            if (Physics.Raycast(ray, out hit, 1f) && hit.collider.CompareTag("Wall"))
+            if (Physics.Raycast(ray, out hit, 5f) && hit.collider.CompareTag("Wall"))
             {
                 Scanning = false;
                 fpsCamera.enabled = true;
