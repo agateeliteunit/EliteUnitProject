@@ -6835,7 +6835,7 @@ MonoBehaviour:
         m_AudioConfig: {fileID: 0}
         m_AudioClips: []
   m_UIMonitorID: 0
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 21300000, guid: 0c25d273ac7fa5a4d826c5f2fde26657, type: 3}
   m_ShowCrosshairsOnAim: 1
   m_CenterCrosshairs: {fileID: 0}
   m_QuadrantOffset: 5
