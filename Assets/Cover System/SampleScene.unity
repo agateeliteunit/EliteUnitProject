@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -240,7 +240,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.00000014901173, y: 0.45769635, z: 0.000000111759135}
+  m_ConnectedAnchor: {x: 0.00000007450586, y: 0.45769632, z: -0.00000012666035}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: -1}
   m_TwistLimitSpring:
@@ -453,7 +453,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.0000001527452, y: 0.30443373, z: 0.000000007450984}
+  m_ConnectedAnchor: {x: -0.00000008568634, y: 0.30443382, z: 0.000000007450984}
   serializedVersion: 2
   m_SwingAxis: {x: 1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -709,7 +709,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.0000000300118, y: 0.30443424, z: 0.00000007502949}
+  m_ConnectedAnchor: {x: 0.000000097538354, y: 0.30443415, z: -0.00000007502949}
   serializedVersion: 2
   m_SwingAxis: {x: -1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -1066,7 +1066,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: -1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.1953001, y: 0.42788538, z: -0.04359637}
+  m_ConnectedAnchor: {x: 0.1953001, y: 0.42788532, z: -0.04359649}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -1258,7 +1258,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.08563812, y: 0.067159824, z: 0.04799031}
+  m_ConnectedAnchor: {x: 0.08563807, y: 0.067159794, z: 0.047990195}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: -1}
   m_TwistLimitSpring:
@@ -1353,7 +1353,7 @@ GameObject:
   - component: {fileID: 919480496}
   - component: {fileID: 919480495}
   - component: {fileID: 919480494}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1378,7 +1378,7 @@ TerrainCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_TerrainData: {fileID: 15600000, guid: 3a0c2f299ec4b9e47ac1b48e17918163, type: 2}
+  m_TerrainData: {fileID: 15600000, guid: 51be3f2204897d35e82fc54420df5e64, type: 2}
   m_EnableTreeColliders: 1
 --- !u!218 &919480495
 Terrain:
@@ -1389,7 +1389,7 @@ Terrain:
   m_GameObject: {fileID: 919480493}
   m_Enabled: 1
   serializedVersion: 6
-  m_TerrainData: {fileID: 15600000, guid: 3a0c2f299ec4b9e47ac1b48e17918163, type: 2}
+  m_TerrainData: {fileID: 15600000, guid: 51be3f2204897d35e82fc54420df5e64, type: 2}
   m_TreeDistance: 5000
   m_TreeBillboardDistance: 50
   m_TreeCrossFadeLength: 5
@@ -2197,7 +2197,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.085637935, y: 0.06715994, z: 0.047990326}
+  m_ConnectedAnchor: {x: -0.08563804, y: 0.06715996, z: 0.047990445}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: -1}
   m_TwistLimitSpring:
@@ -2276,7 +2276,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.00000014664582, y: 0.59235686, z: -0.033276264}
+  m_ConnectedAnchor: {x: -0.000000007953724, y: 0.59235686, z: -0.033276264}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -2592,7 +2592,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.00000018253942, y: 0.45769626, z: -0.00000005960493}
+  m_ConnectedAnchor: {x: -0.000000037252942, y: 0.45769623, z: -0.00000005960493}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: -1}
   m_TwistLimitSpring:
@@ -2963,7 +2963,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.19530019, y: 0.4278855, z: -0.043596294}
+  m_ConnectedAnchor: {x: -0.1953001, y: 0.42788544, z: -0.04359636}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -4075,11 +4075,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1991881915}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35aaed3856c01514297745b28826b249, type: 3}
+  m_Script: {fileID: 11500000, guid: 78a86316e5552cc39b735d80d806138e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 7
-  maxMove: 1
+  customCursor: {fileID: 2800000, guid: 751fd3eea607eda45a705e71fe8da3c0, type: 3}
+  jarakTembak: 100
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 67108864
+  FPSCamera: {fileID: 1532497558}
 --- !u!114 &1991881933
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4089,7 +4093,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1991881915}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bcec72c9f9a220143a2ecb6c175fea47, type: 3}
+  m_Script: {fileID: 11500000, guid: 7162b95d5825d37b9be84509cb2b19d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   tpsCamera: {fileID: 963194227}
@@ -4103,15 +4107,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1991881915}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2808131a63954d4cbe23199a7595cf5, type: 3}
+  m_Script: {fileID: 11500000, guid: ebda68d35f760c31b84ff02bfcfd951d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  customCursor: {fileID: 2800000, guid: 751fd3eea607eda45a705e71fe8da3c0, type: 3}
-  jarakTembak: 100
-  enemyLayer:
-    serializedVersion: 2
-    m_Bits: 67108864
-  FPSCamera: {fileID: 1532497558}
+  moveSpeed: 5
+  maxMove: 1
 --- !u!4 &2026348310 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400178, guid: 4f853fc010b06f7409005ef8e646e2f0, type: 3}
@@ -4236,7 +4236,7 @@ GameObject:
   - component: {fileID: 2056534005}
   - component: {fileID: 2056534004}
   - component: {fileID: 2056534003}
-  m_Layer: 23
+  m_Layer: 25
   m_Name: Plane
   m_TagString: posisiCover
   m_Icon: {fileID: 0}
@@ -4379,7 +4379,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.000000015948947, y: 0.17622864, z: 0.00000016391277}
+  m_ConnectedAnchor: {x: 2.4574401e-14, y: 0.17622852, z: 0.000000074505806}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
