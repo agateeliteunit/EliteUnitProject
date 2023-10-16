@@ -1,6 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Opsive.Shared.Events;
+using Opsive.Shared.Game;
+using Opsive.Shared.StateSystem;
+using Opsive.Shared.Utility;
+using Opsive.UltimateCharacterController.Items;
+using Opsive.UltimateCharacterController.Inventory;
 
 public class FPSMovement : MonoBehaviour
 {
@@ -9,6 +15,13 @@ public class FPSMovement : MonoBehaviour
     private Vector3 posisiAwal;
     private bool moving = false;
     private float posisiSekarang = 0.0f;
+    private Animator anim;
+
+    void start()
+    {
+        anim = GetComponent<Animator>();
+        anim.SetBool("halfCover", true);
+    }
 
     void OnEnable()
     {
@@ -41,9 +54,7 @@ public class FPSMovement : MonoBehaviour
                     }
                     else if (collider.gameObject.layer == LayerMask.NameToLayer("coverAtas"))
                     {
-                        transform.Translate(new Vector3(0, 0.3f, 0) * moveSpeed * Time.deltaTime);
-                        posisiSekarang += moveSpeed * Time.deltaTime;
-                        moving = true;
+                        anim.SetBool("halfCover", true);
                     }
                 }
             }
