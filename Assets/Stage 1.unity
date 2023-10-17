@@ -3502,6 +3502,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2173088644937882008, guid: 1f6577ead500e1cc4b31ef8d86831444, type: 3}
+      propertyPath: m_DamageAmount
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 2439462510553457240, guid: 1f6577ead500e1cc4b31ef8d86831444, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -3549,6 +3553,18 @@ PrefabInstance:
     - target: {fileID: 3067345616097753314, guid: 1f6577ead500e1cc4b31ef8d86831444, type: 3}
       propertyPath: m_Name
       value: PlayerV3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3914294611805008728, guid: 1f6577ead500e1cc4b31ef8d86831444, type: 3}
+      propertyPath: m_DamageAmount
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 5978048211207265437, guid: 1f6577ead500e1cc4b31ef8d86831444, type: 3}
+      propertyPath: m_DamageAmount
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7481126440044166274, guid: 1f6577ead500e1cc4b31ef8d86831444, type: 3}
+      propertyPath: m_DamageAmount
+      value: 60
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
