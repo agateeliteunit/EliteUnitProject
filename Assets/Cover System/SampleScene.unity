@@ -4112,6 +4112,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   maxMove: 1
+  anim: {fileID: 1991881936}
+--- !u!95 &1991881936 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9500000, guid: 4f853fc010b06f7409005ef8e646e2f0, type: 3}
+  m_PrefabInstance: {fileID: 974677750}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2026348310 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400178, guid: 4f853fc010b06f7409005ef8e646e2f0, type: 3}
