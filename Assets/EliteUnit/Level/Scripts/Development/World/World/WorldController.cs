@@ -16,6 +16,12 @@ public class WorldController : MonoBehaviour
         _uiController.UpdateAmmo(_inventoryController._currentAmmo);
         _uiController.UpdateHealth(_inventoryController._currentHealth);
         _uiController.UpdateGrenades(_inventoryController._currentGrenades);
+        Debug.Log("Time left: " + _missionController.timeLeft);
+
+        if (_missionController.timeLeft < 0)
+        {
+            TriggerMissionFailed();
+        }
     }
     
     public void TriggerCheckpoint(Vector3 checkpointPosition)
@@ -54,6 +60,12 @@ public class WorldController : MonoBehaviour
             _missionController.setTimeLeft(_missionController.initialTimeLeft);
         }
         Debug.Log("Checkpoint loaded!");
+    }
+
+    public void TriggerMissionFailed()
+    {   
+        _missionController.MissionFinished();
+        Debug.Log("Mission failed!");
     }
     
     public void TriggerMissionFinished()
