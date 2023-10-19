@@ -1,0 +1,344 @@
+fileFormatVersion: 2
+guid: 2939026702d175f4b8799579ea8da288
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Batu Kecil
+    second: {fileID: 2100000, guid: f695df63a66f4c74a83e809feea32416, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Batu Tengah
+    second: {fileID: 2100000, guid: f1727db6bda66b042bd13f2034525fd3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bukit
+    second: {fileID: 2100000, guid: a68d97591a237644c9be3eda9c0dc60a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Daun Pisang
+    second: {fileID: 2100000, guid: 1a0bbea0c66024d46a6034d3fe510719, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Daun1dif
+    second: {fileID: 2100000, guid: 542d4654a8115d441b72a9af4b668994, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Kayu Persegi
+    second: {fileID: 2100000, guid: 9f285a1868024c246b97b43ec7f67ec8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Log
+    second: {fileID: 2100000, guid: 966e021494e1d74478977e346337106e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.013
+    second: {fileID: 2100000, guid: 5a31469ca2f829245a4b1cc45670ef69, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sandbag L
+    second: {fileID: 2100000, guid: 14fad643a34c7ab49be313d4a07dc72f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sandbag Lurus
+    second: {fileID: 2100000, guid: f6aa58b9a5975a24c91e148d0863f0bd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Semak Belakang
+    second: {fileID: 2100000, guid: 9f3a0b634c4f0f340aaf7812427c0065, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Semak Depan
+    second: {fileID: 2100000, guid: 4d8384fc5038cdc45b99f2c714ea4361, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tanah
+    second: {fileID: 2100000, guid: 9cf1718511fe2934bad151a344d5461a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tanah.001
+    second: {fileID: 2100000, guid: 69abbc6592797c54e8567506a07a5d55, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wooden_Plank_vjjsace
+    second: {fileID: 2100000, guid: 533c52807c18c374294d59d6f1573964, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bukit 2
+    second: {fileID: 2100000, guid: b05ec4778bb44c744a5e7eed59fb90a1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: daun
+    second: {fileID: 2100000, guid: 8f37192d944b8ff48915ca2bd4670180, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: daun3
+    second: {fileID: 2100000, guid: 18b5b12dc74257a4cacb225588be5922, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: log2
+    second: {fileID: 2100000, guid: e486f92956a2fb94ba4d5d968e2f93b9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: log3
+    second: {fileID: 2100000, guid: 3a81dae7f13d7644b9d7005d2034d83f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pohon2
+    second: {fileID: 2100000, guid: ee59b96897c06574980fd47dc17853fd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pohon2.001
+    second: {fileID: 2100000, guid: 354c22bed0ba6d94990e9e3aeef819a7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pohon4
+    second: {fileID: 2100000, guid: 546dd6fb3e2d33e429f68fd7e25ce999, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 5a349618b4c104.3534976515133957367404
+    second: {fileID: 2800000, guid: c73ed1fecfa10724a8960fdeacfbe24e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 5a3adfcd67e4d2.25745971151380782142567450
+    second: {fileID: 2800000, guid: c6a8fd4c467281140b08ca4167a604d5, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: AdobeStock_138926859
+    second: {fileID: 2800000, guid: cb203ee6c184ea347bd1627daab2701b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Tree Branch
+    second: {fileID: 2800000, guid: 1bf0613ca72658e4b9704c84db1942a9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Untitled
+    second: {fileID: 2800000, guid: afdbee42d0fc97742a6c9caa5ff116f1, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: bark-3_diffuse
+    second: {fileID: 2800000, guid: 38421e24ad22a5a4ebc5786be659644b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: bark_color
+    second: {fileID: 2800000, guid: dbd814b8cee4d8341abb79daa4e1d902, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: batudif
+    second: {fileID: 2800000, guid: 3433fe88f6c871d4a82d1bdce3b5ce1b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: batunorm
+    second: {fileID: 2800000, guid: 8cfb6d8c334860b488f24fba4005df50, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: baturough
+    second: {fileID: 2800000, guid: 3e90762b78a915c4fb8892850b9b0694, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: bukit rough
+    second: {fileID: 2800000, guid: 491697fa044814d4baafdbdb11e38900, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: daundiff
+    second: {fileID: 2800000, guid: 4cd2db63ab478884c82ee350a0e03162, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: log_diffuse
+    second: {fileID: 2800000, guid: 57af1af609c0a654dab6d837fc1f7900, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: logdif
+    second: {fileID: 2800000, guid: 6f2cfe67f1fdfaa4495980bee0a3313d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: lognorm
+    second: {fileID: 2800000, guid: 9d9c86ff1627c834ea5aa8d3c0a53d39, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tanah entrance
+    second: {fileID: 2800000, guid: b29567e30928ba14bb174a9b6f20b034, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: udtvadqfa_2K_Albedo
+    second: {fileID: 2800000, guid: 78ca06be57548464785cff8686fd8744, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: udtvadqfa_2K_Normal_LOD0
+    second: {fileID: 2800000, guid: 27c8df71091709b4c8474cc5a392e0a8, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: udtvegsfa_2K_Albedo
+    second: {fileID: 2800000, guid: d4c5a062f873f034396e3411257520e5, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: udtvegsfa_2K_Normal_LOD0
+    second: {fileID: 2800000, guid: 0ae48dd46048f764585434c85d1abec2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vjjsace_2K_Albedo
+    second: {fileID: 2800000, guid: 2a51107b95046064a90feafcd5b01eef, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vjjsace_2K_Normal_LOD0
+    second: {fileID: 2800000, guid: e7b4dd68c58b68a45ab52526c0ba20a2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vkbhcho_2K_Albedo
+    second: {fileID: 2800000, guid: 7c41def4a65d8f54d9c24b4ca939641d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vkbhcho_2K_Normal_LOD0
+    second: {fileID: 2800000, guid: 29273e94b14d64c44b86f5b9fb95f1c5, type: 3}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
