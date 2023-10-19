@@ -68,6 +68,7 @@ namespace Opsive.UltimateCharacterController.Objects
         private Collider[] m_CollidersHit;
         private RaycastHit m_RaycastHit;
         private ScheduledEventBase m_DestructionEvent;
+        private float customdamage;
 
         /// <summary>
         /// Initialize the default values.
@@ -84,6 +85,7 @@ namespace Opsive.UltimateCharacterController.Objects
         /// </summary>
         private void OnEnable()
         {
+            customdamage = DamageAmount;
             if (m_ExplodeOnEnable) {
                 Explode(m_DamageAmount, m_ImpactForce, m_ImpactForceFrames, null, null);
             }
@@ -115,6 +117,7 @@ namespace Opsive.UltimateCharacterController.Objects
         /// <param name="originator">The originator of the object.</param>
         public void Explode(float damageAmount, float impactForce, int impactForceFrames, GameObject originator, GameObject owner = null)
         {
+            damageAmount = customdamage;
             Rigidbody colliderRigidbody = null;
             IForceObject forceObject = null;
             var hitCount = Physics.OverlapSphereNonAlloc(m_Transform.position, m_Radius, m_CollidersHit, m_ImpactLayers, QueryTriggerInteraction.Ignore);
