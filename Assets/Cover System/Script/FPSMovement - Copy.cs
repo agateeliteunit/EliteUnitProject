@@ -25,7 +25,6 @@ public class FPSMovement : MonoBehaviour
     void OnDisable()
     {
         anim.SetBool("halfCover", false);
-        //tes
     }
 
     void Update()

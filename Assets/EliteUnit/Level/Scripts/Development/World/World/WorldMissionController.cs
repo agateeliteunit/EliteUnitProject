@@ -26,6 +26,11 @@ public class WorldMissionController : MonoBehaviour
 	{
 		timeLeft = time;
 	}
+	
+	public void MissionFailed()
+	{
+		Time.timeScale = 0;
+	}
 
     public void MissionFinished()
     {
