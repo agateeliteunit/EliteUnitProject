@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2045,6 +2045,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100008, guid: 4f853fc010b06f7409005ef8e646e2f0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1991881935}
+    - targetCorrespondingSourceObject: {fileID: 100008, guid: 4f853fc010b06f7409005ef8e646e2f0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1991881937}
     - targetCorrespondingSourceObject: {fileID: 100074, guid: 4f853fc010b06f7409005ef8e646e2f0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 554570063}
@@ -2733,7 +2736,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 1006633015
+    m_Bits: 1065484087
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -3139,7 +3142,7 @@ GameObject:
   - component: {fileID: 1800159954}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3152,7 +3155,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1800159952}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0, y: 0, z: 0.46}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3174,11 +3177,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 0.2, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1800159955
 MeshRenderer:
@@ -4079,11 +4082,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   customCursor: {fileID: 2800000, guid: 751fd3eea607eda45a705e71fe8da3c0, type: 3}
-  jarakTembak: 100
-  enemyLayer:
-    serializedVersion: 2
-    m_Bits: 67108864
-  FPSCamera: {fileID: 1532497558}
 --- !u!114 &1991881933
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4113,11 +4111,36 @@ MonoBehaviour:
   moveSpeed: 5
   maxMove: 1
   anim: {fileID: 1991881936}
+  shoot: {fileID: 1991881937}
 --- !u!95 &1991881936 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 9500000, guid: 4f853fc010b06f7409005ef8e646e2f0, type: 3}
   m_PrefabInstance: {fileID: 974677750}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1991881937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1991881915}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e46b51746807e4f4c83cdb7f88318d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jarakTembak: 100
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 67108864
+  FPSCamera: {fileID: 1532497558}
+  efekRecoil: {x: 0.3, y: 0.6}
+  recoilSpeed: 2
+  recoverySpeed: 2
+  fireRate: 15
+  waktuReload: 1
+  maxAmmo: 10
+  reloading: 0
 --- !u!4 &2026348310 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400178, guid: 4f853fc010b06f7409005ef8e646e2f0, type: 3}
@@ -4137,7 +4160,7 @@ GameObject:
   - component: {fileID: 2048593425}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4161,7 +4184,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.07, y: 1, z: 1}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2048593426
 MeshRenderer:
@@ -4242,7 +4265,7 @@ GameObject:
   - component: {fileID: 2056534005}
   - component: {fileID: 2056534004}
   - component: {fileID: 2056534003}
-  m_Layer: 25
+  m_Layer: 23
   m_Name: Plane
   m_TagString: posisiCover
   m_Icon: {fileID: 0}
@@ -4257,7 +4280,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2056534001}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.442, z: -2.92}
+  m_LocalPosition: {x: 0, y: -0.442, z: 3.04}
   m_LocalScale: {x: 0.04, y: 1, z: 0.46}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -12,10 +12,17 @@ public class FPSMovement : MonoBehaviour
 {
     public float moveSpeed = 5.0f;
     public float maxMove = 1.0f;
+    public Animator anim;
     private Vector3 posisiAwal;
     private bool moving = false;
     private float posisiSekarang = 0.0f;
-    public Animator anim;
+    public coverShoot shoot;
+
+    void start()
+    {
+        shoot = GetComponent<coverShoot>();
+        shoot.enabled = false;
+    }
 
     void OnEnable()
     {
@@ -25,7 +32,7 @@ public class FPSMovement : MonoBehaviour
     void OnDisable()
     {
         anim.SetBool("halfCover", false);
-        //tes
+        shoot.enabled = false;
     }
 
     void Update()
@@ -41,16 +48,19 @@ public class FPSMovement : MonoBehaviour
                 anim.SetBool("halfCover", true);
                 if (Input.GetKey(KeyCode.Space))
                 {
+                    shoot.enabled = true;
                     anim.SetBool("halfCover", false);
                 }
                 else
                 {
+                    shoot.enabled = false;
                     anim.SetBool("halfCover", true);
                 }
             }
             
             if (Input.GetKey(KeyCode.Space))
             {
+                shoot.enabled = true;
                 if (posisiSekarang < maxMove)
                 {
                     if (collider.gameObject.layer == LayerMask.NameToLayer("coverKanan"))
@@ -74,6 +84,7 @@ public class FPSMovement : MonoBehaviour
 
             if (!moving && posisiSekarang > 0.0f)
             {
+                shoot.enabled = false;
                 float kembali = Vector3.Distance(transform.position, posisiAwal);
 
                 if (kembali > 0.01f)
