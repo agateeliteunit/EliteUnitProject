@@ -3012,9 +3012,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -3626226445829317399, guid: 2939026702d175f4b8799579ea8da288, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.04805
+      objectReference: {fileID: 0}
+    - target: {fileID: -3626226445829317399, guid: 2939026702d175f4b8799579ea8da288, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.23192
+      objectReference: {fileID: 0}
+    - target: {fileID: -3626226445829317399, guid: 2939026702d175f4b8799579ea8da288, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.00183
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2939026702d175f4b8799579ea8da288, type: 3}
       propertyPath: m_Name
       value: Map 1 Base
+      objectReference: {fileID: 0}
+    - target: {fileID: 5796448376561706402, guid: 2939026702d175f4b8799579ea8da288, type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -5545,6 +5561,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ForestV3
       objectReference: {fileID: 0}
+    - target: {fileID: 3537002366069739800, guid: 3f62e34004d6d650ba62be5afbb4a84c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4205838984640580514, guid: 3f62e34004d6d650ba62be5afbb4a84c, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -5671,6 +5691,10 @@ PrefabInstance:
     - target: {fileID: 3067345616097753314, guid: 1f6577ead500e1cc4b31ef8d86831444, type: 3}
       propertyPath: m_Name
       value: PlayerV3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3067345616097753314, guid: 1f6577ead500e1cc4b31ef8d86831444, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 3914294611805008728, guid: 1f6577ead500e1cc4b31ef8d86831444, type: 3}
       propertyPath: m_DamageAmount
