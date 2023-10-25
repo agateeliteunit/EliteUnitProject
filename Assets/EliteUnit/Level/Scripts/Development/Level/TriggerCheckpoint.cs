@@ -12,6 +12,8 @@ public class TriggerCheckpoint : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             _worldController.TriggerCheckpoint(other.transform.position);
+            // set checkpoint to false
+            gameObject.SetActive(false);
         }
     }
 }
