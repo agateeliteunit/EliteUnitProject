@@ -64,7 +64,7 @@ public class WorldController : MonoBehaviour
 
     public void TriggerMissionFailed()
     {   
-        _missionController.MissionFinished();
+        // _missionController.MissionFinished();
         Debug.Log("Mission failed!");
     }
     
