@@ -110,7 +110,7 @@ public class coverSystem : MonoBehaviour
         while (Scanning)
         {
             fpsCamera.enabled = false;
-            transform.Rotate(Vector3.up, 100f * Time.deltaTime);
+            transform.Rotate(Vector3.up, 300f * Time.deltaTime);
             Ray ray = new Ray(transform.position + Vector3.up, transform.forward);
             RaycastHit hit;
 
