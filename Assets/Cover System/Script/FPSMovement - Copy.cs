@@ -13,15 +13,17 @@ public class FPSMovement : MonoBehaviour
     public float moveSpeed = 5.0f;
     public float maxMove = 1.0f;
     public Animator anim;
+    public coverShoot shoot;
+    public EdgeScrolling scroll;
     private Vector3 posisiAwal;
     private bool moving = false;
     private float posisiSekarang = 0.0f;
-    public coverShoot shoot;
+
 
     void start()
     {
+        scroll = GetComponent<EdgeScrolling>();
         shoot = GetComponent<coverShoot>();
-        shoot.enabled = false;
     }
 
     void OnEnable()
@@ -60,6 +62,7 @@ public class FPSMovement : MonoBehaviour
             
             if (Input.GetKey(KeyCode.Space))
             {
+                scroll.enabled = true;
                 shoot.enabled = true;
                 if (posisiSekarang < maxMove)
                 {
@@ -84,6 +87,7 @@ public class FPSMovement : MonoBehaviour
 
             if (!moving && posisiSekarang > 0.0f)
             {
+                scroll.enabled = false;
                 shoot.enabled = false;
                 float kembali = Vector3.Distance(transform.position, posisiAwal);
 

@@ -2048,6 +2048,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100008, guid: 4f853fc010b06f7409005ef8e646e2f0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1991881937}
+    - targetCorrespondingSourceObject: {fileID: 100008, guid: 4f853fc010b06f7409005ef8e646e2f0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1991881938}
     - targetCorrespondingSourceObject: {fileID: 100074, guid: 4f853fc010b06f7409005ef8e646e2f0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 554570063}
@@ -4112,6 +4115,7 @@ MonoBehaviour:
   maxMove: 1
   anim: {fileID: 1991881936}
   shoot: {fileID: 1991881937}
+  scroll: {fileID: 1991881938}
 --- !u!95 &1991881936 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 9500000, guid: 4f853fc010b06f7409005ef8e646e2f0, type: 3}
@@ -4141,6 +4145,21 @@ MonoBehaviour:
   waktuReload: 1
   maxAmmo: 10
   reloading: 0
+--- !u!114 &1991881938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1991881915}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7622abcc20f349d429f6100a81f847b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  edgeScrollSpeed: 5
+  scrollArea: 10
+  playerCamera: {fileID: 1532497558}
 --- !u!4 &2026348310 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400178, guid: 4f853fc010b06f7409005ef8e646e2f0, type: 3}
