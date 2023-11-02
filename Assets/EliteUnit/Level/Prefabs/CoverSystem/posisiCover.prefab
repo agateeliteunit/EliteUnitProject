@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5559078142260489789}
   - component: {fileID: 1579241769083263755}
   - component: {fileID: 5733332965909171244}
-  m_Layer: 24
+  m_Layer: 25
   m_Name: posisiCover
   m_TagString: posisiCover
   m_Icon: {fileID: 0}

@@ -40,14 +40,14 @@ public class coverSystem : MonoBehaviour
         if (!teleporting)
         {
             Vector3 playerCenter = transform.position;
-            Vector3 boxSize = Vector3.one * 2f;
+            Vector3 boxSize = Vector3.one * 1.5f;
             Collider[] colliders = Physics.OverlapBox(playerCenter, boxSize);
 
             foreach (Collider collider in colliders)
             {
                 if (collider.CompareTag("posisiCover"))
                 {
-                    if (Input.GetKeyDown(KeyCode.E))
+                    if (Input.GetKeyDown(KeyCode.E) && !Scanning)
                     {
                         FPSMode();
                     }
@@ -114,7 +114,7 @@ public class coverSystem : MonoBehaviour
             Ray ray = new Ray(transform.position + Vector3.up, transform.forward);
             RaycastHit hit;
 
-            if (Physics.Raycast(ray, out hit, 5f) && hit.collider.CompareTag("Wall"))
+            if (Physics.Raycast(ray, out hit, 1f) && hit.collider.CompareTag("Wall"))
             {
                 Scanning = false;
                 fpsCamera.enabled = true;
