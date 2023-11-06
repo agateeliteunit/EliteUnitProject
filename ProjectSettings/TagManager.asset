@@ -16,6 +16,7 @@ TagManager:
   - Wall
   - posisiCover
   - TriggerEnemyBase
+  - Emerald AI
   layers:
   - Default
   - TransparentFX
