@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using EmeraldAI.Example;
+using Opsive.UltimateCharacterController.Traits;
 
 namespace EmeraldAI
 {
@@ -11,18 +12,18 @@ namespace EmeraldAI
     //be used for added functionality such as only allowing blocking if the received AI is using the Melee Weapon Type.
     public class EmeraldAIPlayerDamage : MonoBehaviour
     {
+        [SerializeField] protected GameObject m_Character;
         public List<string> ActiveEffects = new List<string>();
         public bool IsDead = false;
 
         public void SendPlayerDamage(int DamageAmount, Transform Target, EmeraldAISystem EmeraldComponent, bool CriticalHit = false)
         {
             //The standard damage function that sends damage to the Emerald AI demo player
-            DamagePlayerStandard(DamageAmount);
 
             DamageOpsivePlayer(DamageAmount, Target);
 
             //Creates damage text on the player's position, if enabled.
-            CombatTextSystem.Instance.CreateCombatText(DamageAmount, transform.position, CriticalHit, false, true);
+            
 
             //Sends damage to another function that will then send the damage to the RFPS player.
             //If you are using RFPS, you can uncomment this to allow Emerald Agents to damage your RFPS player.
@@ -38,7 +39,9 @@ namespace EmeraldAI
 
         void DamageOpsivePlayer(int DamageAmount, Transform target)
         {
-            var tpcHealth = GetComponentInParent<Opsive.UltimateCharacterController.Traits.Health>();
+            var tpcHealth = m_Character.GetComponentInParent<Health>();
+            tpcHealth.Damage(30);
+
             if (tpcHealth)
             {
                 tpcHealth.Damage(DamageAmount, target.position, target.forward, 1f, target.gameObject);
@@ -54,7 +57,7 @@ namespace EmeraldAI
 
                         // For Emerald AI prior to v3.0 comment out the following line
 
-                        emeraldAIEvents.ClearTarget();
+                        //emeraldAIEvents.ClearTarget();
                     }
                 }
 
