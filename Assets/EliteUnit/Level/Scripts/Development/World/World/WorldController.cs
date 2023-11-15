@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class WorldController : MonoBehaviour
 {
+	
     [SerializeField] private WorldCheckpointController _checkpointController;
     [SerializeField] private WorldInventoryController _inventoryController;
     [SerializeField] private WorldMissionController _missionController;
