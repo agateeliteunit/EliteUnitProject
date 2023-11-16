@@ -17,7 +17,6 @@ public class WorldController : MonoBehaviour
         _uiController.UpdateAmmo(_inventoryController._currentAmmo);
         _uiController.UpdateHealth(_inventoryController._currentHealth);
         _uiController.UpdateGrenades(_inventoryController._currentGrenades);
-        Debug.Log("Time left: " + _missionController.timeLeft);
 
         if (_missionController.timeLeft < 0)
         {
