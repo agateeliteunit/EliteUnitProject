@@ -14,6 +14,7 @@ public class tes : MonoBehaviour
     private UltimateCharacterLocomotionHandler characterInput;
     private UnityInput unityInput;
     private FPSMovement fpsMovement;
+    private coverController controller;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,33 +22,33 @@ public class tes : MonoBehaviour
         characterInput = GetComponent<UltimateCharacterLocomotionHandler>();
         unityInput = GetComponent<UnityInput>();
         fpsMovement = GetComponent<FPSMovement>();
+        controller = GetComponent<coverController>();
+    }
+
+    void OnDisable()
+    {
+        characterController.enabled = false;
+        characterInput.enabled = false;
+        unityInput.enabled = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (fpsMovement.enabled)
+        if(Input.GetKey(KeyCode.R))
         {
-            switch (Input.GetKey(KeyCode.Space))
-            {
-                case true:
-                    characterController.enabled = true;
-                    characterInput.enabled = true;
-                    unityInput.enabled = true;
-                    break;
-                case false:
-                    characterController.enabled = false;
-                    characterInput.enabled = false;
-                    unityInput.enabled = false;
-                    break;
-                
-            }
+            characterController.enabled = false;
+            characterInput.enabled = false;
+            unityInput.enabled = false;
         }
         else
         {
             characterController.enabled = true;
-            characterInput.enabled = true;  
+            characterInput.enabled = true;
             unityInput.enabled = true;
         }
+        characterController.enabled = true;
+        characterInput.enabled = true;
+        unityInput.enabled = true;
     }
 }

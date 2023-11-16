@@ -16,21 +16,26 @@ public class FPSMovement : MonoBehaviour
     private Vector3 posisiAwal;
     private bool moving = false;
     private float posisiSekarang = 0.0f;
+    public tes controller;
     public coverShoot shoot;
 
     void start()
     {
+        controller = GetComponent<tes>();
         shoot = GetComponent<coverShoot>();
         shoot.enabled = false;
+        controller.enabled = false;
     }
 
     void OnEnable()
     {
+        controller.enabled = false;
         posisiAwal = transform.position;
     }
 
     void OnDisable()
     {
+        controller.enabled = true;
         anim.SetBool("halfCover", false);
         shoot.enabled = false;
     }
@@ -48,11 +53,13 @@ public class FPSMovement : MonoBehaviour
                 anim.SetBool("halfCover", true);
                 if (Input.GetKey(KeyCode.Space))
                 {
+                    controller.enabled = true;
                     shoot.enabled = true;
                     anim.SetBool("halfCover", false);
                 }
                 else
                 {
+                    controller.enabled = false;
                     shoot.enabled = false;
                     anim.SetBool("halfCover", true);
                 }
@@ -60,6 +67,7 @@ public class FPSMovement : MonoBehaviour
             
             if (Input.GetKey(KeyCode.Space))
             {
+                controller.enabled = true;
                 shoot.enabled = true;
                 if (posisiSekarang < maxMove)
                 {
@@ -80,10 +88,12 @@ public class FPSMovement : MonoBehaviour
             else if (moving)
             {
                 moving = false;
+                controller.enabled = false;
             }
 
             if (!moving && posisiSekarang > 0.0f)
             {
+                controller.enabled = false;
                 shoot.enabled = false;
                 float kembali = Vector3.Distance(transform.position, posisiAwal);
 
