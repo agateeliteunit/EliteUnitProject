@@ -11957,7 +11957,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5231616461524302102, guid: d5fbfcc81c2de2244bd5def7efd4b96c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 28.3
+      value: 28.22
       objectReference: {fileID: 0}
     - target: {fileID: 5231616461524302102, guid: d5fbfcc81c2de2244bd5def7efd4b96c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -18627,7 +18627,7 @@ Transform:
   - {fileID: 7947819483160611905}
   - {fileID: 5494438377192447063}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &401649265598863008
 Transform:
@@ -18944,7 +18944,7 @@ Transform:
   - {fileID: 7827436289903029493}
   - {fileID: 5669146787521772771}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &592086073831795922
 Transform:
@@ -20362,10 +20362,10 @@ MonoBehaviour:
   CurrentDamageAmount: 5
   DamageAmountRun: 5
   WanderRadius: 25
-  TabNumber: 1
+  TabNumber: 6
   TemperamentTabNumber: 6
   DetectionTagsTabNumber: 2
-  AnimationTabNumber: 3
+  AnimationTabNumber: 0
   SoundTabNumber: 0
   MovementTabNumber: 1
   WeaponTypeTabNumber: 0
@@ -20734,6 +20734,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9c62cdc91d08c24a8a6c1170ccbb065, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inaccuracy: 0
   m_Character: {fileID: 203411784}
 --- !u!1 &919132148525972044
 GameObject:
@@ -20755,6 +20756,7 @@ GameObject:
   - component: {fileID: 5866666020391205518}
   - component: {fileID: 5866666020391205517}
   - component: {fileID: 5866666020391205526}
+  - component: {fileID: 5866666020391205527}
   m_Layer: 26
   m_Name: enemy_rifle
   m_TagString: Emerald AI
@@ -23177,7 +23179,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7657250044332182882}
-  m_LocalRotation: {x: 0.67215383, y: 0.13946821, z: -0.69051516, w: -0.22791801}
+  m_LocalRotation: {x: 0.74899155, y: 0.1115782, z: -0.60631156, w: -0.24279262}
   m_LocalPosition: {x: -0.0011849706, y: 0.0031908297, z: 0.0019384427}
   m_LocalScale: {x: 0.0212609, y: 0.30255067, z: 0.16232307}
   m_ConstrainProportionsScale: 0
@@ -23185,7 +23187,7 @@ Transform:
   - {fileID: 1728893261}
   m_Father: {fileID: 7098771644381888739}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -13.203, y: -98.677, z: 151.7}
 --- !u!4 &2634653002067531532
 Transform:
   m_ObjectHideFlags: 0
@@ -29793,7 +29795,7 @@ MonoBehaviour:
     AnimationClip: {fileID: -203655887218126122, guid: 9634a0ffa1a85b34da860632725700a5, type: 3}
   RangedAttackAnimationList:
   - AnimationSpeed: 1
-    AnimationClip: {fileID: -203655887218126122, guid: 3968c3253cba3fa4991144c1b3905394, type: 3}
+    AnimationClip: {fileID: 7400000, guid: 5b9eb20a78cf3f24bb79b1c4e26d8182, type: 3}
   RangedCombatHitAnimationList:
   - AnimationSpeed: 1
     AnimationClip: {fileID: -203655887218126122, guid: 9634a0ffa1a85b34da860632725700a5, type: 3}
@@ -29879,7 +29881,7 @@ MonoBehaviour:
   RangedIdleWarningAnimation: {fileID: 0}
   RangedPutAwayWeaponAnimation: {fileID: 0}
   RangedPullOutWeaponAnimation: {fileID: 0}
-  RangedAttack1Animation: {fileID: -203655887218126122, guid: 3968c3253cba3fa4991144c1b3905394, type: 3}
+  RangedAttack1Animation: {fileID: 7400000, guid: 5b9eb20a78cf3f24bb79b1c4e26d8182, type: 3}
   RangedAttack2Animation: {fileID: 0}
   RangedAttack3Animation: {fileID: 0}
   RangedAttack4Animation: {fileID: 0}
@@ -29919,12 +29921,12 @@ MonoBehaviour:
   CurrentDamageAmount: 5
   DamageAmountRun: 5
   WanderRadius: 25
-  TabNumber: 6
+  TabNumber: 4
   TemperamentTabNumber: 2
   DetectionTagsTabNumber: 2
-  AnimationTabNumber: 1
+  AnimationTabNumber: 2
   SoundTabNumber: 0
-  MovementTabNumber: 1
+  MovementTabNumber: 0
   WeaponTypeTabNumber: 0
   WeaponTypeCombatTabNumber: 0
   WeaponTypeControlTabNumber: 0
@@ -30231,7 +30233,9 @@ MonoBehaviour:
   AILevelUIOutlineSize: {x: 0.35, y: -0.35}
   AILevelUIOutlineColor: {r: 0, g: 0, b: 0, a: 1}
   HealthBarCanvasRef: {fileID: 0}
-  WaypointsList: []
+  WaypointsList:
+  - {x: -39.25775, y: -10.030977, z: -7.818053}
+  - {x: -39.25775, y: -10.030977, z: 0.8507652}
   WaypointIndex: 0
   WaypointHolder: {fileID: 0}
   CollidersInArea: []
@@ -30276,6 +30280,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b453abf343a19743a9b34237d8b1325, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5866666020391205527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132148525972044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9c62cdc91d08c24a8a6c1170ccbb065, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inaccuracy: 0.6
+  m_Character: {fileID: 203411784}
 --- !u!1 &5976863992014789357
 GameObject:
   m_ObjectHideFlags: 0
