@@ -2688,7 +2688,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 335832703}
   m_LocalRotation: {x: -0, y: 0.9998776, z: -0, w: -0.01564943}
-  m_LocalPosition: {x: -6.928314, y: -11.9630995, z: 81.32122}
+  m_LocalPosition: {x: 273.15, y: 144.64, z: 81.27}
   m_LocalScale: {x: 0.28000003, y: 0.28, z: 0.28000003}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -13637,12 +13637,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Character: {fileID: 203411784}
-  _initialAmmo: 0
-  _initialHealth: 0
-  _initialGrenades: 0
-  _currentAmmo: 0
-  _currentHealth: 0
-  _currentGrenades: 0
+  m_CategoryIndex: 0
+  m_ItemSetIndex: 0
 --- !u!4 &1673350684
 Transform:
   m_ObjectHideFlags: 0
@@ -17132,7 +17128,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1980771558}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 295.5, y: 154.7, z: -59.8}
+  m_LocalPosition: {x: 295.5, y: 150.42, z: -59.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17152,6 +17148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _worldController: {fileID: 676318496}
+  _checkpointIndex: 0
 --- !u!65 &1980771561
 BoxCollider:
   m_ObjectHideFlags: 0
