@@ -10,23 +10,58 @@ public class WorldCheckpointController : MonoBehaviour
     
     private int _savedCheckpointIndex;
     private float _savedTimeLeft;
-    private int _savedAmmo;
-    private int _savedGranades = 0;
-    public void SetCheckpoint(Vector3 checkpointPosition, int currentAmmo, int currentGranades, float timeLeft)
+    
+    private int _assaultRifleAmmo;
+    private int _pistolAmmo;
+    private int _granadeAmmo;
+    private int _shotgunAmmo;
+    
+    public int assaultRifleAmmo { get { return _assaultRifleAmmo; } }
+    public int pistolAmmo { get { return _pistolAmmo; } }
+    public int granadeAmmo { get { return _granadeAmmo; } }
+    public int shotgunAmmo { get { return _shotgunAmmo; } }
+    
+    void Start()
     {
+        _savedCheckpointIndex = 0;
+    }
+    
+    public void SetCheckpoint(
+        int checkpointIndex,
+        int assaultRifleAmmo,
+        int pistolAmmo, 
+        int granadeAmmo,
+        int shotgunAmmo,
+        float timeLeft
+        ) {
         for (int i = 0; i < _checkpoints.Length; i++)
         {
-            if (_checkpoints[i].transform.position == checkpointPosition)
+            Debug.Log("Checkpoint position: " + _checkpoints[i].transform.position);
+            if (_savedCheckpointIndex == checkpointIndex)
             {
-                _playerSpawnPoint.transform.position = _checkpoints[i].transform.position;
-                _checkpoints[i].SetActive(false);
-                // _savedAmmo = currentAmmo;
-                // _savedGranades = currentGranades;
-                // _savedTimeLeft = timeLeft;
+                Debug.Log("Checkpoint found! at index: " + i);
+                
+                _playerSpawnPoint.transform.position = new Vector3(
+                    _checkpoints[i].transform.position.x,
+                    _checkpoints[i].transform.position.y + 1,
+                    _checkpoints[i].transform.position.z
+                    );
+                
+                _savedTimeLeft = timeLeft;
+                _assaultRifleAmmo = assaultRifleAmmo;
+                _pistolAmmo = pistolAmmo;
+                _granadeAmmo = granadeAmmo;
+                _shotgunAmmo = shotgunAmmo;
+                
                 _savedCheckpointIndex++;
-                Debug.Log("Checkpoint saved! at index: " + _savedCheckpointIndex);
+                
+                Debug.Log("Assault Rifle Ammo Saved: " + _assaultRifleAmmo);
+                Debug.Log("Pistol Ammo Saved: " + _pistolAmmo);
+                Debug.Log("Granade Ammo Saved: " + _granadeAmmo);
+                Debug.Log("Shotgun Ammo Saved: " + _shotgunAmmo);
             }
         }
+        
     }
     
     public void LoadCheckpoint()
@@ -37,16 +72,6 @@ public class WorldCheckpointController : MonoBehaviour
     public int GetSavedCheckpointIndex()
     {
         return _savedCheckpointIndex;
-    }
-    
-    public int GetSavedAmmo()
-    {
-        return _savedAmmo;
-    }
-    
-    public int GetSavedGranades()
-    {
-        return _savedGranades;
     }
     
     public float GetSavedTimeLeft()
