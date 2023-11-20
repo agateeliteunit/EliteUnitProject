@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46f2863a75db98143b79303a52a8f5f9, type: 3}
   m_Name: EnemyStats
   m_EditorClassIdentifier: 
-  patrolSpeed: 2
+  patrolSpeed: 4
   chaseSpeed: 5
   evadeSpeed: 15
   patrolWaitTime: 2
@@ -32,4 +32,4 @@ MonoBehaviour:
     m_Bits: 10497
   targetMask:
     serializedVersion: 2
-    m_Bits: 2048
+    m_Bits: 2147484160
