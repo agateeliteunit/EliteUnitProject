@@ -296,7 +296,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 983c70c8482b97a4fbfa660a698ec73c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  videoCutscene: {fileID: 0}
+  videoCutscene: {fileID: 1415379883}
   sceneName: Stage 1 Fix
 --- !u!1 &1891521628
 GameObject:
