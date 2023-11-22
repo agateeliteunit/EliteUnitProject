@@ -7,6 +7,8 @@ using Opsive.Shared.Events;
 
 public class UIGameOver : MonoBehaviour
 {
+    public GameOver gameOver;
+
     public void MainMenu()
     {
         SceneManager.LoadScene("MainMenu");
@@ -20,9 +22,10 @@ public class UIGameOver : MonoBehaviour
     /// <summary>
     /// The object has respawned.
     /// </summary>
-    private void OnRespawn()
+    public void OnRespawn()
     {
         Debug.Log(name + " Respawned.");
+        gameOver.gameOverUI.SetActive(false);
     }
 
     /// <summary>

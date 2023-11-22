@@ -24,4 +24,9 @@ public class GameOver : MonoBehaviour
     {
         gameOverUI.gameObject.SetActive(true);
     }
+
+    public void OnRespawn()
+    {
+        gameOverUI.gameObject.SetActive(false);
+    }
 }
