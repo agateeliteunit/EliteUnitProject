@@ -28,6 +28,7 @@ public class WorldCheckpointController : MonoBehaviour
     
     public void SetCheckpoint(
         int checkpointIndex,
+		Vector3 checkpointPosition,
         int assaultRifleAmmo,
         int pistolAmmo, 
         int granadeAmmo,
@@ -41,11 +42,7 @@ public class WorldCheckpointController : MonoBehaviour
             {
                 Debug.Log("Checkpoint found! at index: " + i);
                 
-                _playerSpawnPoint.transform.position = new Vector3(
-                    _checkpoints[i].transform.position.x,
-                    _checkpoints[i].transform.position.y + 1,
-                    _checkpoints[i].transform.position.z
-                    );
+                _playerSpawnPoint.transform.position = checkpointPosition;
                 
                 _savedTimeLeft = timeLeft;
                 _assaultRifleAmmo = assaultRifleAmmo;

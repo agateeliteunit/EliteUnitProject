@@ -1723,6 +1723,7 @@ MonoBehaviour:
   moveSpeed: 5
   maxMove: 2
   anim: {fileID: 203411799}
+  controller: {fileID: 0}
   shoot: {fileID: 203411819}
 --- !u!114 &203411802
 MonoBehaviour:
@@ -8722,6 +8723,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _worldController: {fileID: 676318496}
+  finishCanvas: {fileID: 0}
 --- !u!65 &1078421627
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17128,7 +17130,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1980771558}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 295.5, y: 150.42, z: -59.8}
+  m_LocalPosition: {x: 295.5, y: 146, z: -59.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17168,8 +17170,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 64.575714, y: 12.312888, z: 2.1062164}
-  m_Center: {x: 2.8532314, y: -4.2153125, z: -0.5531082}
+  m_Size: {x: 64.575714, y: 16.512188, z: 2.1062164}
+  m_Center: {x: 2.8532333, y: -2.1156619, z: -0.5531082}
 --- !u!4 &1981028326 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1888848441915327114, guid: d7d649510ca9fe042b33de28d45384bd, type: 3}
