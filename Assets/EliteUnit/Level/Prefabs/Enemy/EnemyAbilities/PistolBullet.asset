@@ -42,7 +42,7 @@ MonoBehaviour:
   GravityAmount: 1
   AbilityIcon: {fileID: 0}
   AbilityEffect: {fileID: 919132149155446097, guid: 4a70b5108e47e3e44a14360641587d67, type: 3}
-  CreateEffect: {fileID: 100000, guid: 692ca2eaf609ac745bb1206eaffeac81, type: 3}
+  CreateEffect: {fileID: 1156049964569698, guid: 00274eefc0873a64594c29b75cff5d72, type: 3}
   SummonEffect: {fileID: 0}
   SummonObject: {fileID: 0}
   DamageOverTimeEffect: {fileID: 0}

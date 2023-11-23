@@ -18,13 +18,15 @@ public class WorldController : MonoBehaviour
         {
             TriggerMissionFailed();
         }
+
     }
     
-    public void TriggerCheckpoint(int checkpointIndex)
+    public void TriggerCheckpoint(int checkpointIndex, Vector3 checkpointPosition)
     {
         _missionController.IncreaseTimeLeft(30);
         _checkpointController.SetCheckpoint(
             checkpointIndex,
+			checkpointPosition,
 			_inventoryController.currentRifleAmmo,
 			_inventoryController.currentPistolAmmo,
 			_inventoryController.currentGrenadeAmmo,
