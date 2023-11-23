@@ -10,7 +10,7 @@ public class TriggerFinish : MonoBehaviour
 
     void Start()
     {
-        finishCanvas.gameObject.SetActive(false);
+        // finishCanvas.gameObject.SetActive(false);
     }
 
     void OnTriggerEnter(Collider other)

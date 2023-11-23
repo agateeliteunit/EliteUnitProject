@@ -69,25 +69,10 @@ public class WorldController : MonoBehaviour
         Debug.Log("Mission finished!");
     }
     
-    public void TriggerPlayerDeath()
-    {
-        Debug.Log("Player died!");
-    }
-    
-    public void TriggerFire()
-    {
-        Debug.Log("Fire!");
-    }
-    
-    public void TriggerGrenade()
-    {
-        Debug.Log("Grenade!");
-    }
-    
-    public void TriggerDecreaseHP()
-    {
-        Debug.Log("Enemy died!");
-    }
-    
+    public void OnDeath(Vector3 position, Vector3 force, GameObject attacker)
+	{
+		_checkpointController.LoadCheckpoint();
+		Debug.Log("Mission Failed");
+	}
 
 }
