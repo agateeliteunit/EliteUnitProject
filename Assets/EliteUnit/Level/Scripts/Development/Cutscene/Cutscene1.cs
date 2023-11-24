@@ -27,7 +27,7 @@ public class Cutscene1 : MonoBehaviour
 
     IEnumerator cekCutscene()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(4f);
 
         while (videoCutscene.isPlaying)
         {
