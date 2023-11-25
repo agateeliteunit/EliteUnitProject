@@ -20,9 +20,24 @@ public class WorldUIController : MonoBehaviour
     private string _minuteValue;
     private string _secondValue;
     
+    public void Map1()
+    {
+        SceneManager.LoadScene("Cutscene 1");
+    }
+
+    public void Map2()
+    {
+        SceneManager.LoadScene("Cutscene 2");
+    }
+
+    public void Map3()
+    {
+        SceneManager.LoadScene("Cutscene 3");
+    }
+
     public void PlayGame()
     {
-        SceneManager.LoadScene("Stage 1");
+        SceneManager.LoadScene("Menu Level");
     }
 
     public void Credits()
