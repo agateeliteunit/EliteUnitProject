@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using UnityEngine;
-using EnemyAI;
 
 // This class is created for the example scene. There is no support for this script.
 public class PlayerShooting : MonoBehaviour

@@ -143,7 +143,7 @@ namespace EnemyAI
 			}
 		}
 
-		// Set NPC orientation and speed on the animator contoller.
+		// Set NPC orientation and speed on the animator controller.
 		void NavAnimSetup()
 		{
 			float speed;
@@ -173,7 +173,7 @@ namespace EnemyAI
 				else
 					angle = Vector3.SignedAngle(transform.forward, nav.desiredVelocity, transform.up);
 			}
-			// Use angle deadzone (clearance) to avoid flickering when facing player.
+			// Use angle dead zone (clearance) to avoid flickering when facing player.
 			if (!controller.Strafing && Mathf.Abs(angle) < controller.generalStats.angleDeadzone)
 			{
 				transform.LookAt(transform.position + nav.desiredVelocity);

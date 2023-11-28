@@ -42,9 +42,9 @@ public class HurtHUD : MonoBehaviour
 				toRemoveKeys.Add(key);
 			}
 		}
-		for (int i = 0; i < toRemoveKeys.Count; i++)
+		foreach (int key in toRemoveKeys)
 		{
-			DestroyHurtUI(toRemoveKeys[i]);
+			DestroyHurtUI(key);
 		}
     }
 
@@ -56,7 +56,7 @@ public class HurtHUD : MonoBehaviour
 		}
 		else
 		{
-			GameObject hurtUI = Object.Instantiate<GameObject>(hurtPrefab, canvas);
+			GameObject hurtUI = Instantiate(hurtPrefab, canvas);
 			SetRotation(hurtUI.GetComponent<Image>(), cam.forward, shotOrigin.position - player.position);
 			HurtData data;
 			data.shotOrigin = shotOrigin;

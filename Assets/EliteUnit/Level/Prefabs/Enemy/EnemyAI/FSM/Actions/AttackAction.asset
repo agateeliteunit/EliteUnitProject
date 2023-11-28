@@ -12,4 +12,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1b6ed1705d8d044ca79b1c61c7aee45, type: 3}
   m_Name: AttackAction
   m_EditorClassIdentifier: 
-  finishedAimDelay: 0.5

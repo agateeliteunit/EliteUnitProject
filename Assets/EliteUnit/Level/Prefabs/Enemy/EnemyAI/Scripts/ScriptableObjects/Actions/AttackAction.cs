@@ -8,6 +8,8 @@ public class AttackAction : Action
 {
 	private readonly float startShootDelay = 0.2f; // Delay before start shooting.
 	private readonly float aimAngleGap = 30f;      // Minimum angle gap between current and desired aim orientations.
+	private static readonly int Shooting = Animator.StringToHash("Shooting");
+	private static readonly int Crouch = Animator.StringToHash("Crouch");
 
 	// The act function, called on Update() (State controller - current state - action).
 	public override void Act(StateController controller)
@@ -50,8 +52,8 @@ public class AttackAction : Action
 		controller.variables.shotsInRound = Random.Range(controller.maximumBurst / 2, controller.maximumBurst);
 		controller.variables.currentShots = 0;
 		controller.variables.startShootTimer = 0f;
-		controller.enemyAnimation.anim.ResetTrigger("Shooting");
-		controller.enemyAnimation.anim.SetBool("Crouch", false);
+		controller.enemyAnimation.anim.ResetTrigger(Shooting);
+		controller.enemyAnimation.anim.SetBool(Crouch, false);
 		controller.variables.waitInCoverTimer = 0;
 		controller.enemyAnimation.ActivatePendingAim();
 	}
@@ -61,7 +63,7 @@ public class AttackAction : Action
 		// Check interval between shots.
 		if (Time.timeScale > 0 && controller.variables.shotTimer == 0f)
 		{
-			controller.enemyAnimation.anim.SetTrigger("Shooting");
+			controller.enemyAnimation.anim.SetTrigger(Shooting);
 			CastShot(controller);
 		}
 		// Update shot related variables and habilitate next shot.
@@ -104,13 +106,13 @@ public class AttackAction : Action
 		Vector3 hitNormal = default, bool organic = false, Transform target = null)
 	{
 		// Draw muzzle flash.
-		GameObject muzzleFlash = Object.Instantiate<GameObject>(controller.classStats.muzzleFlash, controller.enemyAnimation.gunMuzzle);
+		GameObject muzzleFlash = Instantiate(controller.classStats.muzzleFlash, controller.enemyAnimation.gunMuzzle);
 		muzzleFlash.transform.localPosition = Vector3.zero;
 		muzzleFlash.transform.localEulerAngles = Vector3.back * 90f;
 		controller.StartCoroutine(this.DestroyFlash(muzzleFlash));
 
 		// Draw shot tracer and smoke.
-		GameObject shotTracer = Object.Instantiate<GameObject>(controller.classStats.shot, controller.enemyAnimation.gunMuzzle);
+		GameObject shotTracer = Instantiate(controller.classStats.shot, controller.enemyAnimation.gunMuzzle);
 		// Padding to start shot tracer
 		Vector3 origin = controller.enemyAnimation.gunMuzzle.position - controller.enemyAnimation.gunMuzzle.right * 0.5f;
 		shotTracer.transform.position = origin;
@@ -122,7 +124,7 @@ public class AttackAction : Action
 			GameObject bulletHole = Instantiate(controller.classStats.bulletHole);
 			bulletHole.transform.rotation = Quaternion.FromToRotation(Vector3.up, hitNormal);
 			bulletHole.transform.position = hitPoint + 0.01f * hitNormal;
-			GameObject instantSparks = Object.Instantiate<GameObject>(controller.classStats.sparks);
+			GameObject instantSparks = Instantiate(controller.classStats.sparks);
 			instantSparks.transform.position = hitPoint;
 		}
 		// The object hit is organic, call take damage function.

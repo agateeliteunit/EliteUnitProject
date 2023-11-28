@@ -19,7 +19,7 @@ public class AdvanceCoverDecision : Decision
 			return false;
 
 		controller.variables.waitRounds = 0;
-		// Return previusly calculated probability to move to another cover spot.
+		// Return previously calculated probability to move to another cover spot.
 		// If target is near, the NPC will not advance.
 		return controller.variables.advanceCoverDecision && !targetNear.Decide(controller);
 	}

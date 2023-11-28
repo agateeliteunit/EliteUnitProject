@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using EnemyAI;
 
-// Decision to wait an ammount of time.
+// Decision to wait an amount of time.
 [CreateAssetMenu(menuName = "Enemy AI/Decisions/Waited")]
 public class WaitedDecision : Decision
 {

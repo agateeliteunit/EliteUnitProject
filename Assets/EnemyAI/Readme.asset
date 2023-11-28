@@ -1,0 +1,118 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b4b451f8c32afa4cac1f12327ace150, type: 3}
+  m_Name: Readme
+  m_EditorClassIdentifier: 
+  icon: {fileID: 2800000, guid: def5247ab8c8de44db568ed0a1c47775, type: 3}
+  title: Enemy AI
+  sections:
+  - heading: 
+    text: 
+    linkText: 
+    url: 
+    asset: 
+  - heading: 
+    text: Thank you for acquiring the <b>Enemy AI</b> package for the <i>Unity 3D</i>
+      engine!
+    linkText: 
+    url: 
+    asset: 
+  - heading: 
+    text: This <b>Enemy AI</b> asset contains a complete <b>AI</b> system with instantly
+      configurable enemy shooter <b>NPCs</b>, featuring a plug and play, expandable
+      <b>FSM</b> <i>(finite state machine)</i>. Setup enemies in your shooter game
+      within minutes!
+    linkText: 
+    url: 
+    asset: 
+  - heading: Features
+    text: 
+    linkText: 
+    url: 
+    asset: 
+  - heading: 
+    text: "\u2611 Ready to use enemy humanoid <b>NPCs</b> <i>(non player characters)</i>,
+      with a complete <b>FSM</b> <i>(finite state machine)</i> <b>AI</b> system,
+      featuring <i>patrol</i>, <i>search</i> and engage actions (with <i>shooting</i>,
+      <i>reloading</i>, <i>take cover</i>, among other actions). Also provides a
+      quick setup for any <i>humanoid</i> avatar custom model."
+    linkText: 
+    url: 
+    asset: 
+  - heading: 
+    text: "\u2611 Enemies with fully customizable <b>short/long</b> <i>weapons accuracy</i>,
+      <i>damage</i>, <i>life</i>, and more features, allowing you to create from
+      the easiest enemy to the toughest one!"
+    linkText: 
+    url: 
+    asset: 
+  - heading: Get Started
+    text: 
+    linkText: 
+    url: 
+    asset: 
+  - heading: 
+    text: 
+    linkText: How to setup the enemies in your shooter game
+    url: https://youtu.be/3Iv0K6d-iAI
+    asset: 
+  - heading: 
+    text: 
+    linkText: Building Custom FSMs for NPCs with Enemy AI
+    url: https://youtu.be/HuctrVdchpA
+    asset: 
+  - heading: More information
+    text: 
+    linkText: 
+    url: 
+    asset: 
+  - heading: 
+    text: 
+    linkText: <b>README</b>
+    url: 
+    asset: 1e33362fc4c345c409eb1cebd4c11c13
+  - heading: 
+    text: 
+    linkText: Support
+    url: https://viniciusmarques.cods.dev/support?package=EnemyAI&ref=readme_package
+    asset: 
+  - heading: 
+    text: 
+    linkText: Official Topic - Unity Forum
+    url: https://forum.unity.com/threads/released-enemy-ai.852568/
+    asset: 
+  - heading: 
+    text: 
+    linkText: Showcase video
+    url: https://youtu.be/8r2uYhCOAMA
+    asset: 
+  - heading: Demo Scenes
+    text: 
+    linkText: 
+    url: 
+    asset: 
+  - heading: 
+    text: 
+    linkText: FPS
+    url: 
+    asset: 3984c5d5fe985f946ada75ddae8e4786
+  - heading: 
+    text: 
+    linkText: TopDown
+    url: 
+    asset: 1c3d95a776b27094f8b48dc051eea4e4
+  - heading: 
+    text: 
+    linkText: LightGunShooter
+    url: 
+    asset: 69c1b66b47316aa4aa0a680404e5cce9
+  loadedLayout: 1

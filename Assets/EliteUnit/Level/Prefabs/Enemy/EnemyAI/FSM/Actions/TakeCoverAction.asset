@@ -12,4 +12,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18ecbd9dfc38d0d468c718cffdec22f0, type: 3}
   m_Name: TakeCoverAction
   m_EditorClassIdentifier: 
-  coverTime: 5

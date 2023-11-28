@@ -8,7 +8,7 @@ public class HealthManager : MonoBehaviour
 	public class DamageInfo
 	{
 		public Vector3 location, direction;      // Hit location and direction.
-		public float damage;                     // Damage ammount.
+		public float damage;                     // Damage amount.
 		public Collider bodyPart;               // The body part (Collider) that was hit (optional).
 		public GameObject origin;                // The game object that generated the hit (optional).
 

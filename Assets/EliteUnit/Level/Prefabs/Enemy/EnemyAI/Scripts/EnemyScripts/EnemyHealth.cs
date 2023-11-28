@@ -24,6 +24,7 @@ namespace EnemyAI
 		private HealthBillboardManager healthUI;                    // The NPC health HUD.
 		private Animator anim;                                      // The NPC animator controller.
 		private StateController controller;                         // The NPC AI FSM controller.
+		private static readonly int Hit = Animator.StringToHash("Hit");
 
 		private void Awake()
 		{
@@ -63,7 +64,7 @@ namespace EnemyAI
 			}
 
 			// Create spouted blood particle on shot location.
-			Object.Instantiate<GameObject>(bloodSample, location, Quaternion.LookRotation(-direction), this.transform);
+			Instantiate(bloodSample, location, Quaternion.LookRotation(-direction), this.transform);
 			// Take damage received from current health.
 			health -= damage;
 
@@ -72,7 +73,7 @@ namespace EnemyAI
 			{
 				// Trigger hit animation.
 				if(!anim.IsInTransition(3) && anim.GetCurrentAnimatorStateInfo(3).IsName("No hit"))
-					anim.SetTrigger("Hit");
+					anim.SetTrigger(Hit);
 				// Show Health bar HUD.
 				healthUI.SetVisible();
 				UpdateHealthBar();
@@ -92,7 +93,7 @@ namespace EnemyAI
 			}
 		}
 
-		// Remove unecessary components on killed NPC and set as dead.
+		// Remove unnecessary components on killed NPC and set as dead.
 		public void Kill()
 		{
 			// Destroy all other MonoBehaviour scripts attached to the NPC.

@@ -5,10 +5,10 @@ using UnityEngine.AI;
 
 namespace EnemyAI
 {
-	// This component ititially stores all level covers, and then chooses the best one on demand.
+	// This component initially stores all level covers, and then chooses the best one on demand.
 	public class CoverLookup : MonoBehaviour
 	{
-		private List<Vector3[]> allCoverSpots;              // The level avaliable cover spots.
+		private List<Vector3[]> allCoverSpots;              // The level available cover spots.
 		private GameObject[] covers;                        // The level covers.
 		private List<int> coverHashCodes;                   // Cover unique IDs.
 
@@ -62,8 +62,8 @@ namespace EnemyAI
 				float baseHeight = (col.bounds.center - col.bounds.extents).y;
 				float range = 2 * col.bounds.extents.y;
 
-				Vector3 deslocForward = go.transform.forward * go.transform.localScale.z / 2f;
-				Vector3 deslocRight = go.transform.right * go.transform.localScale.x / 2f;
+				Vector3 shiftForward = go.transform.forward * go.transform.localScale.z / 2f;
+				Vector3 shiftRight = go.transform.right * go.transform.localScale.x / 2f;
 
 				// Is it a custom mesh collider?
 				if (go.GetComponent<MeshCollider>())
@@ -72,31 +72,31 @@ namespace EnemyAI
 					Vector3 originFwd = col.bounds.center + go.transform.forward * maxBounds;
 					Vector3 originRight = col.bounds.center + go.transform.right * maxBounds;
 					if (Physics.Raycast(originFwd, col.bounds.center - originFwd, out RaycastHit hit, maxBounds, obstacleMask))
-						deslocForward = hit.point - col.bounds.center;
+						shiftForward = hit.point - col.bounds.center;
 					if (Physics.Raycast(originRight, col.bounds.center - originRight, out hit, maxBounds, obstacleMask))
-						deslocRight = hit.point - col.bounds.center;
+						shiftRight = hit.point - col.bounds.center;
 				}
 				// Is it a primitive collider with different dimensions?
 				else if (Vector3.Equals(go.transform.localScale, Vector3.one))
 				{
-					deslocForward = go.transform.forward * col.bounds.extents.z;
-					deslocRight = go.transform.right * col.bounds.extents.x;
+					shiftForward = go.transform.forward * col.bounds.extents.z;
+					shiftRight = go.transform.right * col.bounds.extents.x;
 				}
 
 				// Calculate spot points around the cover.
 				float edgeFactor = 0.75f;
-				ProcessPoint(bounds, col.bounds.center + deslocRight + deslocForward * edgeFactor, baseHeight, range);
-				ProcessPoint(bounds, col.bounds.center + deslocForward + deslocRight * edgeFactor, baseHeight, range);
-				ProcessPoint(bounds, col.bounds.center + deslocForward, baseHeight, range);
-				ProcessPoint(bounds, col.bounds.center + deslocForward - deslocRight * edgeFactor, baseHeight, range);
-				ProcessPoint(bounds, col.bounds.center - deslocRight + deslocForward * edgeFactor, baseHeight, range);
-				ProcessPoint(bounds, col.bounds.center + deslocRight, baseHeight, range);
-				ProcessPoint(bounds, col.bounds.center + deslocRight - deslocForward * edgeFactor, baseHeight, range);
-				ProcessPoint(bounds, col.bounds.center - deslocForward + deslocRight * edgeFactor, baseHeight, range);
-				ProcessPoint(bounds, col.bounds.center - deslocForward, baseHeight, range);
-				ProcessPoint(bounds, col.bounds.center - deslocForward - deslocRight * edgeFactor, baseHeight, range);
-				ProcessPoint(bounds, col.bounds.center - deslocRight - deslocForward * edgeFactor, baseHeight, range);
-				ProcessPoint(bounds, col.bounds.center - deslocRight, baseHeight, range);
+				ProcessPoint(bounds, col.bounds.center + shiftRight + shiftForward * edgeFactor, baseHeight, range);
+				ProcessPoint(bounds, col.bounds.center + shiftForward + shiftRight * edgeFactor, baseHeight, range);
+				ProcessPoint(bounds, col.bounds.center + shiftForward, baseHeight, range);
+				ProcessPoint(bounds, col.bounds.center + shiftForward - shiftRight * edgeFactor, baseHeight, range);
+				ProcessPoint(bounds, col.bounds.center - shiftRight + shiftForward * edgeFactor, baseHeight, range);
+				ProcessPoint(bounds, col.bounds.center + shiftRight, baseHeight, range);
+				ProcessPoint(bounds, col.bounds.center + shiftRight - shiftForward * edgeFactor, baseHeight, range);
+				ProcessPoint(bounds, col.bounds.center - shiftForward + shiftRight * edgeFactor, baseHeight, range);
+				ProcessPoint(bounds, col.bounds.center - shiftForward, baseHeight, range);
+				ProcessPoint(bounds, col.bounds.center - shiftForward - shiftRight * edgeFactor, baseHeight, range);
+				ProcessPoint(bounds, col.bounds.center - shiftRight - shiftForward * edgeFactor, baseHeight, range);
+				ProcessPoint(bounds, col.bounds.center - shiftRight, baseHeight, range);
 
 			}
 			return bounds.ToArray();
@@ -105,8 +105,7 @@ namespace EnemyAI
 		// Get the navmesh point closest to the reference cover spot.
 		private void ProcessPoint(List<Vector3> ls, Vector3 naivePoint, float baseHeight, float range)
 		{
-			NavMeshHit hit;
-			if (NavMesh.SamplePosition(naivePoint, out hit, range, NavMesh.AllAreas))
+			if (NavMesh.SamplePosition(naivePoint, out NavMeshHit hit, range, NavMesh.AllAreas))
 			{
 				ls.Add(hit.position);
 			}
@@ -125,7 +124,7 @@ namespace EnemyAI
 				returnArray.Add(-1);
 				returnArray.Add(Vector3.positiveInfinity);
 			}
-			// Return best pontential spot.
+			// Return best potential spot.
 			else
 			{
 				returnArray.Add(nextCoverHash);
@@ -176,9 +175,11 @@ namespace EnemyAI
 					}
 				}
 			}
-			ArrayList returnArray = new ArrayList();
-			returnArray.Add(nextCoverHash);
-			returnArray.Add(minDist);
+			ArrayList returnArray = new ArrayList
+			{
+				nextCoverHash,
+				minDist
+			};
 			// Return the nearest filtered spot.
 			return returnArray;
 		}

@@ -5,6 +5,8 @@ using EnemyAI;
 [CreateAssetMenu(menuName = "Enemy AI/Actions/Search")]
 public class SearchAction : Action
 {
+	private static readonly int Crouch = Animator.StringToHash("Crouch");
+
 	// The act function, called on Update() (State controller - current state - action).
 	public override void Act(StateController controller)
 	{
@@ -23,7 +25,7 @@ public class SearchAction : Action
 		// Setup initial values for the action.
 		controller.focusSight = false;
 		controller.enemyAnimation.AbortPendingAim();
-		controller.enemyAnimation.anim.SetBool("Crouch", false);
+		controller.enemyAnimation.anim.SetBool(Crouch, false);
 		controller.CoverSpot = Vector3.positiveInfinity;
 	}
 }

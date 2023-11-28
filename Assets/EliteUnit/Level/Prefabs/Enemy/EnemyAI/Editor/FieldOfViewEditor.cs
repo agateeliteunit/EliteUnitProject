@@ -3,7 +3,7 @@ using UnityEditor;
 
 namespace EnemyAI
 {
-	// This script is an editor extension to vizualize the NPC sense areas (view ,perception and near) on the scene viewer.
+	// This script is an editor extension to visualize the NPC sense areas (view ,perception and near) on the scene viewer.
 	[CustomEditor(typeof(StateController))]
 	public class FieldOfViewEditor : Editor
 	{

@@ -27,29 +27,27 @@ namespace EnemyAI
 			gameObject.SetActive(false);
 		}
 
-		//Orient bilboard after all camera movement is completed in this frame to avoid jittering
+		//Orient billboard after all camera movement is completed in this frame to avoid jittering
 		void LateUpdate()
 		{
-			if (gameObject.activeSelf)
+			if (!gameObject.activeSelf) return;
+			// Orientate HUD.
+			transform.LookAt(transform.position + m_Camera.transform.rotation * Vector3.forward,
+				m_Camera.transform.rotation * Vector3.up);
+			// Update decay timer while HUD is visible.
+			decayTimer += Time.deltaTime;
+			if (decayTimer >= 0.5f * decayDuration)
 			{
-				// Orientate HUD.
-				transform.LookAt(transform.position + m_Camera.transform.rotation * Vector3.forward,
-					m_Camera.transform.rotation * Vector3.up);
-				// Update decay timer while HUD is visible.
-				decayTimer += Time.deltaTime;
-				if (decayTimer >= 0.5f * decayDuration)
-				{
-					float from = decayTimer - (0.5f * decayDuration);
-					float to = 0.5f * decayDuration;
-					// Lerp HUD colors to transparent.
-					hud.color = Color.Lerp(originalColor, noAlphaColor, from / to);
-					bar.color = Color.Lerp(originalColor, noAlphaColor, from / to);
-				}
-				// Disable HUD visibility.
-				if (decayTimer >= decayDuration)
-				{
-					gameObject.SetActive(false);
-				}
+				float from = decayTimer - (0.5f * decayDuration);
+				float to = 0.5f * decayDuration;
+				// Lerp HUD colors to transparent.
+				hud.color = Color.Lerp(originalColor, noAlphaColor, from / to);
+				bar.color = Color.Lerp(originalColor, noAlphaColor, from / to);
+			}
+			// Disable HUD visibility.
+			if (decayTimer >= decayDuration)
+			{
+				gameObject.SetActive(false);
 			}
 		}
 

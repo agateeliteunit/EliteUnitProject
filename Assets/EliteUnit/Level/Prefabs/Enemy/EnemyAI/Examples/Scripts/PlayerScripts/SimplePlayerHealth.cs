@@ -42,7 +42,7 @@ public class SimplePlayerHealth : HealthManager
 		else if (!dead)
 		{
 			dead = true;
-			StartCoroutine("ReloadScene");
+			StartCoroutine(nameof(ReloadScene));
 		}
 	}
 

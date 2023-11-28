@@ -36,7 +36,7 @@ public class FindCoverAction : Action
 		// Set navigation parameters.
 		controller.nav.destination = controller.CoverSpot;
 		controller.nav.speed = controller.generalStats.evadeSpeed;
-		// Fullfill current round shots.
+		// Fulfill current round shots.
 		controller.variables.currentShots = controller.variables.shotsInRound;
 	}
 }

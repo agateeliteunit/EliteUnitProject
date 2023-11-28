@@ -18,7 +18,7 @@ namespace EnemyAI
 		[Tooltip("The obstacle layer mask.")]
 		public LayerMask obstacleMask;
 		[Header("Animation")]
-		[Tooltip("Clearance angle (deadzone) to avoid aim flickering.")]
+		[Tooltip("Clearance angle (dead zone) to avoid aim flickering.")]
 		public float angleDeadzone = 5f;
 		[Tooltip("Damping time for the speed parameter.")]
 		public float speedDampTime = 0.4f;

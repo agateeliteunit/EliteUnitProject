@@ -34,8 +34,6 @@ public class FocusDecision : Decision
 			case Sense.VIEW:
 				radius = controller.viewRadius;
 				break;
-			default:
-				break;
 		}
 	}
 	// The decide function, called on Update() (State controller - current state - transition - decision).
@@ -52,7 +50,7 @@ public class FocusDecision : Decision
 		// Is there any target, with a clear sight to it?
 		if (hasTargets && !controller.BlockedSight())
 		{
-			// Invalidade current cover spot (ex.: used to move from position when spotted).
+			// Invalidate current cover spot (ex.: used to move from position when spotted).
 			if(invalidateCoverSpot)
 				controller.CoverSpot = Vector3.positiveInfinity;
 			// Set current target parameters.

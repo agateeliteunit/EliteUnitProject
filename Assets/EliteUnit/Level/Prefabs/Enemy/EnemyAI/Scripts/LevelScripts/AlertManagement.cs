@@ -16,7 +16,7 @@ public class AlertManagement : MonoBehaviour
 	void Start()
 	{
 		// Ping the current alert (if any) periodically. Default period: 1 second.
-		InvokeRepeating("PingAlert", 1, 1);
+		InvokeRepeating(nameof(PingAlert), 1, 1);
 	}
 
 	// Alert nearby objects of an event.

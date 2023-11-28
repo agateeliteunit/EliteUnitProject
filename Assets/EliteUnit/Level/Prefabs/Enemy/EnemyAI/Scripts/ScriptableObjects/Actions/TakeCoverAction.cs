@@ -7,6 +7,7 @@ public class TakeCoverAction : Action
 {
 	private readonly int coverMin = 2;  // Minimum period to stay on cover.
 	private readonly int coverMax = 5;  // Maximum period to stay on cover.
+	private static readonly int Crouch = Animator.StringToHash("Crouch");
 
 	// The act function, called on Update() (State controller - current state - action).
 	public override void Act(StateController controller)
@@ -18,14 +19,16 @@ public class TakeCoverAction : Action
 		// Count blind engage timer.
 		controller.variables.blindEngageTimer += Time.deltaTime;
 		// If crouching, orientate NPC to current target.
-		if (controller.enemyAnimation.anim.GetBool("Crouch"))
+		if (controller.enemyAnimation.anim.GetBool(Crouch))
 			Rotating(controller);
 	}
 	// Rotate the NPC to face the target.
 	private void Rotating(StateController controller)
 	{
-		Quaternion targetRotation = Quaternion.LookRotation(controller.personalTarget - controller.transform.position);
-		if(Quaternion.Angle(controller.transform.rotation, targetRotation) > 5f)
+		Vector3 toTarget = controller.personalTarget - controller.transform.position;
+		toTarget.y = 0;
+		Quaternion targetRotation = Quaternion.LookRotation(toTarget);
+		if (Quaternion.Angle(controller.transform.rotation, targetRotation) > 5f)
 			controller.transform.rotation = Quaternion.Slerp(controller.transform.rotation, targetRotation, 10f * Time.deltaTime);
 	}
 	// The action on enable function, triggered once after a FSM state transition.
@@ -37,7 +40,7 @@ public class TakeCoverAction : Action
 		// Set current round cover time.
 		if (!Equals(controller.CoverSpot, Vector3.positiveInfinity))
 		{
-			controller.enemyAnimation.anim.SetBool("Crouch", true);
+			controller.enemyAnimation.anim.SetBool(Crouch, true);
 			controller.variables.coverTime = Random.Range(coverMin, coverMax);
 		}
 		else

@@ -54,6 +54,8 @@ namespace EnemyAI
 		private bool strafing;                                      // Is the NPC strafing?
 		private bool aiming;                                        // Is the NPC aiming?
 		private bool checkedOnLoop, blockedSight;                   // Blocked sight test related variables.
+		private static readonly int Strafe = Animator.StringToHash("Strafe");
+		private static readonly int Aim = Animator.StringToHash("Aim");
 
 		// Reset cover position.
 		private void OnDestroy()
@@ -64,14 +66,8 @@ namespace EnemyAI
 		// Get and Set current cover spot.
 		public Vector3 CoverSpot
 		{
-			get
-			{
-				return coverSpot[this.GetHashCode()];
-			}
-			set
-			{
-				coverSpot[this.GetHashCode()] = value;
-			}
+			get => coverSpot[this.GetHashCode()];
+			set => coverSpot[this.GetHashCode()] = value;
 		}
 
 		// Get and Set for strafing and aiming states.
@@ -80,7 +76,7 @@ namespace EnemyAI
 			get => strafing;
 			set
 			{
-				enemyAnimation.anim.SetBool("Strafe", value);
+				enemyAnimation.anim.SetBool(Strafe, value);
 				strafing = value;
 			}
 		}
@@ -91,13 +87,13 @@ namespace EnemyAI
 			{
 				if (aiming != value)
 				{
-					enemyAnimation.anim.SetBool("Aim", value);
+					enemyAnimation.anim.SetBool(Aim, value);
 					aiming = value;
 				}
 			}
 		}
 
-		// Liberate aim for a short period of time, alowing NPC body realignment.
+		// Liberate aim for a short period of time, allowing NPC body realignment.
 		public IEnumerator UnstuckAim(float delay)
 		{
 			Aiming = false;
@@ -108,8 +104,7 @@ namespace EnemyAI
 		void Awake()
 		{
 			// Setup the references.
-			if (coverSpot == null)
-				coverSpot = new Dictionary<int, Vector3>();
+			coverSpot ??= new Dictionary<int, Vector3>();
 			coverSpot[this.GetHashCode()] = Vector3.positiveInfinity;
 			nav = GetComponent<NavMeshAgent>();
 			aiActive = true;
@@ -229,7 +224,7 @@ namespace EnemyAI
 
 				// Hit anything other than target? Uses cover and obstacle masks.
 				blockedSight =
-					Physics.Raycast(castOrigin, dirToTarget, out RaycastHit hit, dirToTarget.magnitude,
+					Physics.Raycast(castOrigin, dirToTarget, out _, dirToTarget.magnitude,
 					generalStats.coverMask | generalStats.obstacleMask);
 			}
 			return blockedSight;

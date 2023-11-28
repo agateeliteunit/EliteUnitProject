@@ -6,6 +6,8 @@ using EnemyAI;
 [CreateAssetMenu(menuName = "Enemy AI/Actions/Patrol")]
 public class PatrolAction : Action
 {
+	private static readonly int Crouch = Animator.StringToHash("Crouch");
+
 	// The act function, called on Update() (State controller - current state - action).
 	public override void Act(StateController controller)
 	{
@@ -16,7 +18,7 @@ public class PatrolAction : Action
 	{
 		// Setup initial values for the action.
 		controller.enemyAnimation.AbortPendingAim();
-		controller.enemyAnimation.anim.SetBool("Crouch", false);
+		controller.enemyAnimation.anim.SetBool(Crouch, false);
 		controller.personalTarget = Vector3.positiveInfinity;
 		controller.CoverSpot = Vector3.positiveInfinity;
 		controller.focusSight = false;

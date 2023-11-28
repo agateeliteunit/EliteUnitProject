@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using EnemyAI;
 
-// The aim callibration action.
+// The aim calibration action.
 [CreateAssetMenu(menuName = "Enemy AI/Actions/Debug Aim")]
 public class DebugAimAction : Action
 {
