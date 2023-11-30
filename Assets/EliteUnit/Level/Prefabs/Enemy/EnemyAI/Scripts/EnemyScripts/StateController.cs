@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using Opsive.UltimateCharacterController.Traits;
 
 namespace EnemyAI
 {
 	// This class controls the NPC Finite State Machine (FSM).
 	public class StateController : MonoBehaviour
 	{
-		[Tooltip("NPC common stats.")]
+        [Tooltip("NPC common stats.")]
 		public GeneralStats generalStats;
 		[Tooltip("NPC class specific stats.")]
 		public ClassStats classStats;
@@ -153,8 +154,8 @@ namespace EnemyAI
 				return;
 			// Execute current FSM state actions.
 			currentState.DoActions(this);
-			// Check current FSM state transition conditions.
-			currentState.CheckTransitions(this);
+            // Check current FSM state transition conditions.
+            currentState.CheckTransitions(this);
 		}
 
 		// Change the current FSM state (called externally).

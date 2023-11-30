@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 using Opsive.Shared.Events;
 
 public class WorldMissionController : MonoBehaviour
@@ -15,6 +17,10 @@ public class WorldMissionController : MonoBehaviour
     private int remainingHPPoints = 50;
     private int deathPenalty = -1000;
     private int pointsPerSecond = 100;
+
+    public TextMeshProUGUI timePointsText;
+    public TextMeshProUGUI killPointsText;
+    public TextMeshProUGUI totalPointsText;
 
     [SerializeField] protected GameObject m_Character;
 
@@ -33,6 +39,15 @@ public class WorldMissionController : MonoBehaviour
             // timeLeft = 0;
             MissionFailed();
         }
+
+        UpdateUI();
+    }
+
+    void UpdateUI()
+    {
+        timePointsText.text = CalculateTimePoints().ToString();
+        killPointsText.text = CalculateKillPoints().ToString();
+        totalPointsText.text = totalPoints.ToString();
     }
 
     public void IncreaseTimeLeft(float time)
@@ -86,5 +101,15 @@ public class WorldMissionController : MonoBehaviour
         }
 
         return points;
+    }
+
+    public int CalculateTimePoints()
+    {
+        return (int)(pointsPerSecond * timeLeft);
+    }
+
+    public int CalculateKillPoints()
+    {
+        return killPoints;
     }
 }
