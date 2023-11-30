@@ -11,22 +11,31 @@ public class WorldMissionController : MonoBehaviour
     public float initialTimeLeft;
 
     public int totalPoints;
+    private int totalPointsDeath;
 
     private int killPoints = 50;
     private int headShot = 100;
     private int remainingHPPoints = 50;
     private int deathPenalty = -1000;
+    private int zeroPenalty = 0;
     private int pointsPerSecond = 100;
 
     public TextMeshProUGUI timePointsText;
     public TextMeshProUGUI killPointsText;
     public TextMeshProUGUI totalPointsText;
 
+    public TextMeshProUGUI timePointsLostText;
+    public TextMeshProUGUI killPointsLostText;
+    public TextMeshProUGUI totalPointsLostText;
+
+    public GameObject gameOverUI;
+
     [SerializeField] protected GameObject m_Character;
 
     void Start()
     {
         initialTimeLeft = timeLeft;
+        gameOverUI.gameObject.SetActive(false);
     }
 
     void Update()
@@ -48,6 +57,11 @@ public class WorldMissionController : MonoBehaviour
         timePointsText.text = CalculateTimePoints().ToString();
         killPointsText.text = CalculateKillPoints().ToString();
         totalPointsText.text = totalPoints.ToString();
+        
+        timePointsLostText.text = CalculateTimePoints().ToString();
+        killPointsLostText.text = CalculateKillPoints().ToString();
+        totalPointsLostText.text = totalPointsDeath.ToString();
+        
     }
 
     public void IncreaseTimeLeft(float time)
@@ -111,5 +125,16 @@ public class WorldMissionController : MonoBehaviour
     public int CalculateKillPoints()
     {
         return killPoints;
+    }
+
+    public void gameOver()
+    {
+        gameOverUI.gameObject.SetActive(true);
+        totalPointsDeath = CalculatePoints() - deathPenalty;
+    }
+
+    public void OnRespawn()
+    {
+        gameOverUI.gameObject.SetActive(false);
     }
 }
