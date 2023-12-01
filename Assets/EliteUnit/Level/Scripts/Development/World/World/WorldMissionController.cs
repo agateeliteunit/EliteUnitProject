@@ -137,4 +137,21 @@ public class WorldMissionController : MonoBehaviour
     {
         gameOverUI.gameObject.SetActive(false);
     }
+
+	public void pauseMission() 
+	{
+		// enable ui here
+
+		// pause game
+		Time.timeScale = 0;
+	}
+	
+	public void resumeMission()
+	{
+		// resume game
+	    Time.timeScale = 1;
+
+		// disable ui here
+
+	}
 }
