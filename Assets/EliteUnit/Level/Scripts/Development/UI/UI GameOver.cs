@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Opsive.Shared.Events;
+using Opsive.UltimateCharacterController.Traits;
+
 
 public class UIGameOver : MonoBehaviour
 {
@@ -15,6 +17,8 @@ public class UIGameOver : MonoBehaviour
     private int remainingHPPoints = 50;
     private int deathPenalty = -1000;
     private int pointsPerSecond = 100;
+
+    public CharacterRespawner characterRespawner;
 
     public void MainMenu()
     {
@@ -31,8 +35,14 @@ public class UIGameOver : MonoBehaviour
     /// </summary>
     public void OnRespawn()
     {
-        Debug.Log(name + " Respawned.");
+
+        CharacterRespawner characterRespawner = GetComponent<CharacterRespawner>();
+
+        characterRespawner.Respawn();
+
         gameOver.gameOverUI.SetActive(false);
+
+        Debug.Log(name + " Respawned.");
     }
 
     /// <summary>

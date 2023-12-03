@@ -950,6 +950,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _timeLeftText: {fileID: 368161202}
+  audio: {fileID: 0}
+  resolutionDropdown: {fileID: 0}
 --- !u!4 &128862164
 Transform:
   m_ObjectHideFlags: 0
@@ -1382,7 +1384,7 @@ RectTransform:
   - {fileID: 1643849460}
   - {fileID: 2110173325}
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1404,6 +1406,7 @@ MonoBehaviour:
   gameOver: {fileID: 0}
   enemyPoint: {fileID: 0}
   timePoint: {fileID: 902580873}
+  characterRespawner: {fileID: 0}
 --- !u!1001 &187222015
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3718,6 +3721,7 @@ MonoBehaviour:
   gameOver: {fileID: 0}
   enemyPoint: {fileID: 843154576}
   timePoint: {fileID: 902580873}
+  characterRespawner: {fileID: 0}
 --- !u!114 &416121136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3801,7 +3805,7 @@ RectTransform:
   - {fileID: 830665375}
   - {fileID: 1888127294}
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -4654,7 +4658,7 @@ Transform:
   - {fileID: 1419868889}
   - {fileID: 1043043744}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &522713908 stripped
 Transform:
@@ -5672,8 +5676,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 676318495}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.4683623, y: -7.5890474, z: 30.95309}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 272.70212, y: 146.15784, z: 80.984314}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5682,8 +5686,8 @@ Transform:
   - {fileID: 902580875}
   - {fileID: 374871402}
   - {fileID: 1673350684}
-  m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_Father: {fileID: 2119774038}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &684190327
 PrefabInstance:
@@ -8405,6 +8409,7 @@ MonoBehaviour:
   killPointsLostText: {fileID: 613294439}
   totalPointsLostText: {fileID: 1643849461}
   gameOverUI: {fileID: 179699377}
+  characterRespawner: {fileID: 0}
   m_Character: {fileID: 203411784}
 --- !u!4 &902580875
 Transform:
@@ -11532,7 +11537,7 @@ Transform:
   - {fileID: 1163382198}
   - {fileID: 137779962}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1275949442
 PrefabInstance:
@@ -17760,7 +17765,7 @@ Transform:
   - {fileID: 1847727178}
   - {fileID: 1885820368}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1885820367
 PrefabInstance:
@@ -20804,6 +20809,7 @@ Transform:
   - {fileID: 1518714226}
   - {fileID: 335832704}
   - {fileID: 1995544335}
+  - {fileID: 676318497}
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -21003,6 +21009,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1052588511460791285, guid: 1f6577ead500e1cc4b31ef8d86831444, type: 3}
+      propertyPath: m_ApplyFallDamage
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1052588511460791285, guid: 1f6577ead500e1cc4b31ef8d86831444, type: 3}
       propertyPath: m_OnDeathEvent.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -26338,6 +26348,10 @@ PrefabInstance:
     - target: {fileID: 7481126440044166274, guid: 1f6577ead500e1cc4b31ef8d86831444, type: 3}
       propertyPath: m_DamageAmount
       value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 9063857842804416180, guid: 1f6577ead500e1cc4b31ef8d86831444, type: 3}
+      propertyPath: m_PositioningMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9063857842804416180, guid: 1f6577ead500e1cc4b31ef8d86831444, type: 3}
       propertyPath: m_OnRespawnEvent.m_PersistentCalls.m_Calls.Array.size

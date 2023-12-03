@@ -7,6 +7,7 @@ using Opsive.Shared.Events;
 
 public class GameOver : MonoBehaviour
 {
+    private int deathPenalty = -1000;
     public GameObject gameOverUI;
     // Start is called before the first frame update
     void Start()

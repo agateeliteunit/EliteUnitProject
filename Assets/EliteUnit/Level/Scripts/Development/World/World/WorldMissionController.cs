@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using Opsive.Shared.Events;
+using Opsive.UltimateCharacterController.Traits;
 
 public class WorldMissionController : MonoBehaviour
 {
@@ -29,6 +30,8 @@ public class WorldMissionController : MonoBehaviour
     public TextMeshProUGUI totalPointsLostText;
 
     public GameObject gameOverUI;
+
+    public CharacterRespawner characterRespawner;
 
     [SerializeField] protected GameObject m_Character;
 
@@ -130,12 +133,17 @@ public class WorldMissionController : MonoBehaviour
     public void gameOver()
     {
         gameOverUI.gameObject.SetActive(true);
+        pauseMission();
         totalPointsDeath = CalculatePoints() - deathPenalty;
     }
 
-    public void OnRespawn()
+    public void OnRespawn(Vector3 position, Quaternion rotation, bool transformChange)
     {
+        CharacterRespawner characterRespawner = GetComponent<CharacterRespawner>();
+
         gameOverUI.gameObject.SetActive(false);
+
+        characterRespawner.Respawn(position, rotation, transformChange);
     }
 
 	public void pauseMission() 
