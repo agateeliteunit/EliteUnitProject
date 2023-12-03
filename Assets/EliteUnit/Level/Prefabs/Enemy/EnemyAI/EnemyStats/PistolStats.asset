@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b8a8978f5979594489a2ddfdf4b9dc1, type: 3}
   m_Name: PistolStats
   m_EditorClassIdentifier: 
-  aimOffset: {x: -75, y: 0, z: 0}
-  leftArmAim: {x: -4, y: 0, z: 2}
+  aimOffset: {x: -68, y: 0, z: 0}
+  leftArmAim: {x: -1, y: 1, z: 2}
   leftArmGuard: {x: 0, y: 0, z: 0}
-  changeCoverChance: 27
+  changeCoverChance: 30
   weaponType: 1
   bulletDamage: 10
   shotSound: {fileID: 8300000, guid: 11a2cd22af68ad948bf879a3e6901bc0, type: 3}
   reloadSound: {fileID: 8300000, guid: 5445df1500da47941851cfbf3ac1953f, type: 3}
-  shotRateFactor: 0.5
+  shotRateFactor: 0.2
   shotErrorRate: 0.04
   muzzleFlash: {fileID: 1040379479616710939, guid: 56ce24c1ba722234395e08ec787ff14d, type: 3}
   shot: {fileID: 7050756295436598934, guid: 4beeec5288f782e4292564be660a53b5, type: 3}
