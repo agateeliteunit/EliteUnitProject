@@ -17,7 +17,7 @@ MonoBehaviour:
   leftArmGuard: {x: 0, y: 0, z: 0}
   changeCoverChance: 30
   weaponType: 1
-  bulletDamage: 10
+  bulletDamage: 10.2
   shotSound: {fileID: 8300000, guid: 11a2cd22af68ad948bf879a3e6901bc0, type: 3}
   reloadSound: {fileID: 8300000, guid: 5445df1500da47941851cfbf3ac1953f, type: 3}
   shotRateFactor: 0.2

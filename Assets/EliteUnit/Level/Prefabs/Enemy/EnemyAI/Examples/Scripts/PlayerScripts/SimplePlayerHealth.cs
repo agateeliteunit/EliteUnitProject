@@ -1,16 +1,18 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Opsive.UltimateCharacterController.Traits;
 
 // This class is created for the example scene. There is no support for this script.
 public class SimplePlayerHealth : HealthManager
 {
-	public float health = 100f;
+    [SerializeField] protected GameObject m_Character;
+    private AttributeManager m_AttributeManager = new AttributeManager();
 
 	public Transform canvas;
 	public GameObject hurtPrefab;
 	public float decayFactor = 0.8f;
-
+	public float health = 100f;
 	private HurtHUD hurtUI;
 
 	private void Awake()
@@ -20,15 +22,16 @@ public class SimplePlayerHealth : HealthManager
 		hurtUI.Setup(canvas, hurtPrefab, decayFactor, this.transform);
 	}
 
-	public override void TakeDamage(Vector3 location, Vector3 direction, float damage, Collider bodyPart, GameObject origin)
-	{
-		health -= damage;
+    public override void TakeDamage(Vector3 location, Vector3 direction, float damage, Collider bodyPart, GameObject origin)
+    {
+        var health = m_Character.GetComponent<Health>();
+		health.Damage(10);
 
-		if (hurtPrefab && canvas)
-			hurtUI.DrawHurtUI(origin.transform, origin.GetHashCode());
-	}
+        if (hurtPrefab && canvas)
+            hurtUI.DrawHurtUI(origin.transform, origin.GetHashCode());
+    }
 
-	public void OnGUI()
+    public void OnGUI()
 	{
 		if (health > 0f)
 		{

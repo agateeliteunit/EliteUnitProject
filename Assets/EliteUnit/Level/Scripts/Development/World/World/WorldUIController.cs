@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
 public class WorldUIController : MonoBehaviour
 {
@@ -19,6 +20,33 @@ public class WorldUIController : MonoBehaviour
     private int _second;
     private string _minuteValue;
     private string _secondValue;
+    public AudioMixer audio;
+    public TMP_Dropdown resolutionDropdown;
+    Resolution[] resolutions;
+
+    public void setReso(int resoIndex)
+    {
+        Resolution resolution = resolutions[resoIndex];
+        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
+    }
+
+    public void setVol(float volume)
+    {
+        audio.SetFloat("volume", volume);
+    }
+
+    public void ScreenMode(int screen)
+    {
+        if(screen == 0)
+        {
+            Screen.fullScreen = true;
+        }
+
+        else if(screen == 1)
+        {
+            Screen.fullScreen = false;
+        }
+    }
     
     public void Map1()
     {
@@ -47,12 +75,32 @@ public class WorldUIController : MonoBehaviour
 
     public void FooterExit()
     {
-        SceneManager.LoadScene("MainMenu");
+        Application.Quit();
     }
 
     void Start()
     {
         // _missionFinishedCanvas.SetActive(false);
+        resolutions = Screen.resolutions;
+
+        List<string> options = new List<string>();
+
+        int currentReso = 0;
+
+        for(int i = 0; i < resolutions.Length; i++)
+        {
+            string option = resolutions[i].width + " x " + resolutions[i].height;
+            options.Add(option);
+
+            if(resolutions[i].width == Screen.currentResolution.width && resolutions[i].height == Screen.currentResolution.height)
+            {
+                currentReso = i;
+            }
+        }
+
+        resolutionDropdown.AddOptions(options);
+        resolutionDropdown.value = currentReso;
+        resolutionDropdown.RefreshShownValue();
     }
     
     public void UpdateTimeLeft(float timeLeft)

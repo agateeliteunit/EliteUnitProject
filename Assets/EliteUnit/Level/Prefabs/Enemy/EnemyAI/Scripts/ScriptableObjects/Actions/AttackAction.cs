@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using UnityEngine;
 using EnemyAI;
+using Opsive.UltimateCharacterController.Traits;
 
 // The NPC attack action.
 [CreateAssetMenu(menuName = "Enemy AI/Actions/Attack")]
 public class AttackAction : Action
 {
-	private readonly float startShootDelay = 0.2f; // Delay before start shooting.
+    private readonly float startShootDelay = 0.2f; // Delay before start shooting.
 	private readonly float aimAngleGap = 30f;      // Minimum angle gap between current and desired aim orientations.
 	private static readonly int Shooting = Animator.StringToHash("Shooting");
 	private static readonly int Crouch = Animator.StringToHash("Crouch");
@@ -60,8 +61,8 @@ public class AttackAction : Action
 	// Perform the shoot action.
 	private void Shoot(StateController controller)
 	{
-		// Check interval between shots.
-		if (Time.timeScale > 0 && controller.variables.shotTimer == 0f)
+        // Check interval between shots.
+        if (Time.timeScale > 0 && controller.variables.shotTimer == 0f)
 		{
 			controller.enemyAnimation.anim.SetTrigger(Shooting);
 			CastShot(controller);
